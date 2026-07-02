@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="da" id="html-root">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt – Clarix Compliance</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<section class="page-hero" style="position:relative;">
+  <div id="ph-pat" style="position:absolute;inset:0;z-index:0;opacity:.09;pointer-events:none;"></div>
+  <div class="wrap page-hero-content">
+    <span class="eyebrow" id="ey"></span>
+    <h1 id="h1"></h1>
+    <p id="sub"></p>
+  </div>
+</section>
+
+<section class="section section-grey">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 id="ci-h3"></h3>
+        <p id="ci-p1"></p>
+        <p id="ci-p2"></p>
+        <div style="margin-top:24px;">
+          <div class="cinfo-item"><span>📍</span><span id="ci-loc"></span></div>
+          <div class="cinfo-item"><span>🏢</span><span>Clarix Compliance Consulting</span></div>
+          <div class="cinfo-item"><span>🔗</span>
+            <a href="https://www.linkedin.com/in/dunyazadran" target="_blank" rel="noopener"
+               style="color:var(--teal);font-weight:500;">LinkedIn — Dunya Zadran</a>
+          </div>
+        </div>
+        <div style="margin-top:28px;background:rgba(28,140,140,.07);border-left:3px solid var(--teal);border-radius:2px;padding:20px 22px;">
+          <p style="font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:8px;" id="ci-typical-label"></p>
+          <p style="font-size:12px;font-weight:300;color:var(--mid-grey);line-height:1.7;margin:0;" id="ci-typical"></p>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3 id="cf-h3"></h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label id="lbl-first"></label>
+            <input type="text" id="first" placeholder="Anna"/>
+          </div>
+          <div class="form-group">
+            <label id="lbl-last"></label>
+            <input type="text" id="last" placeholder="Nielsen"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label id="lbl-email"></label>
+          <input type="email" id="email" placeholder="anna@virksomhed.dk"/>
+        </div>
+        <div class="form-group">
+          <label id="lbl-company"></label>
+          <input type="text" id="company" placeholder="MedTech A/S"/>
+        </div>
+        <div class="form-group">
+          <label id="lbl-topic"></label>
+          <select id="topic">
+            <option value="" disabled selected id="lbl-topic-def"></option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label id="lbl-msg"></label>
+          <textarea id="msg" placeholder="..."></textarea>
+        </div>
+        <button class="btn btn-navy" onclick="handleSubmit(event)"
+          style="width:100%;justify-content:center;padding:13px;font-size:.9rem;" id="btn-send"></button>
+        <p class="form-success" id="form-success"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/brand.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+document.getElementById('html-root').lang = window.currentLang;
+renderNav('nav_contact'); renderFooter();
+document.getElementById('ph-pat').innerHTML = Brand.brandPattern('php6','#FFFFFF','#1C8C8C');
+
+const L = window.currentLang;
+const topics_da = ['MDR / IVDR compliance','Kvalitetsstyring (ISO 13485)','AI Governance / EU AI Act','Pharma Regulatory Affairs / GxP','Risikostyring (ISO 14971)','Workshop / Træning','Andet / ikke sikker endnu'];
+const topics_en = ['MDR / IVDR compliance','Quality Management (ISO 13485)','AI Governance / EU AI Act','Pharma Regulatory Affairs / GxP','Risk Management (ISO 14971)','Workshop / Training','Other / not sure yet'];
+
+if (L==='da') {
+  document.getElementById('ey').textContent = 'Kontakt';
+  document.getElementById('h1').textContent = 'Lad os tale';
+  document.getElementById('sub').textContent = 'Har du et specifikt projekt, eller vil du bare forstå din regulatoriske position? Start her.';
+  document.getElementById('ci-h3').textContent = 'Hvad kan du forvente';
+  document.getElementById('ci-p1').textContent = 'Jeg svarer på alle henvendelser inden for én hverdag. Vores første samtale er altid uformel — jeg vil forstå din situation, inden jeg foreslår noget. Ingen forpligtelse, intet salgspres.';
+  document.getElementById('ci-p2').textContent = 'Har du et tidsfølsomt regulatory problem, bedes du nævne det i din besked — så prioriterer jeg.';
+  document.getElementById('ci-loc').textContent = 'Odense, Danmark — tilgængelig remote i hele Europa';
+  document.getElementById('ci-typical-label').textContent = 'Typiske henvendelser';
+  document.getElementById('ci-typical').textContent = 'MDR/IVDR teknisk dokumentation · QMS-implementering · AI governance workshops · Notified body forberedelse · GxP compliance-gennemgang';
+  document.getElementById('cf-h3').textContent = 'Send en besked';
+  document.getElementById('lbl-first').textContent = 'Fornavn';
+  document.getElementById('lbl-last').textContent  = 'Efternavn';
+  document.getElementById('lbl-email').textContent  = 'E-mailadresse';
+  document.getElementById('lbl-company').textContent = 'Virksomhed / Organisation';
+  document.getElementById('lbl-topic').textContent   = 'Primært interesseområde';
+  document.getElementById('lbl-topic-def').textContent = 'Vælg ét';
+  document.getElementById('lbl-msg').textContent = 'Fortæl mig om din situation';
+  document.getElementById('msg').placeholder = 'Beskriv din regulatoriske udfordring, tidslinje eller hvad du forsøger at opnå...';
+  document.getElementById('btn-send').textContent = 'Send besked';
+  document.getElementById('form-success').textContent = '✓ Besked sendt — jeg vender tilbage inden for én hverdag.';
+  topics_da.forEach(tp => {
+    const o = document.createElement('option');
+    o.value = tp; o.textContent = tp;
+    document.getElementById('topic').appendChild(o);
+  });
+} else {
+  document.getElementById('ey').textContent = 'Contact';
+  document.getElementById('h1').textContent = "Let's talk";
+  document.getElementById('sub').textContent = 'Whether you have a specific project or just want to understand your regulatory position — start here.';
+  document.getElementById('ci-h3').textContent = 'What to expect';
+  document.getElementById('ci-p1').textContent = 'I respond to all enquiries within one business day. Our first conversation is always informal — I want to understand your situation before proposing anything. No obligation, no sales pressure.';
+  document.getElementById('ci-p2').textContent = 'If you are dealing with a time-sensitive regulatory issue, please mention it in your message and I will prioritise accordingly.';
+  document.getElementById('ci-loc').textContent = 'Odense, Denmark — available remotely across Europe';
+  document.getElementById('ci-typical-label').textContent = 'Typical enquiries';
+  document.getElementById('ci-typical').textContent = 'MDR/IVDR technical documentation · QMS implementation · AI governance workshops · Notified body preparation · GxP compliance review';
+  document.getElementById('cf-h3').textContent = 'Send a message';
+  document.getElementById('lbl-first').textContent = 'First name';
+  document.getElementById('lbl-last').textContent  = 'Last name';
+  document.getElementById('lbl-email').textContent  = 'Email address';
+  document.getElementById('lbl-company').textContent = 'Company / Organisation';
+  document.getElementById('lbl-topic').textContent   = 'Primary area of interest';
+  document.getElementById('lbl-topic-def').textContent = 'Select one';
+  document.getElementById('lbl-msg').textContent = 'Tell me about your situation';
+  document.getElementById('msg').placeholder = 'Describe your regulatory challenge, timeline, or what you are trying to achieve...';
+  document.getElementById('btn-send').textContent = 'Send message';
+  document.getElementById('form-success').textContent = '✓ Message sent — I will be in touch within one business day.';
+  topics_en.forEach(tp => {
+    const o = document.createElement('option');
+    o.value = tp; o.textContent = tp;
+    document.getElementById('topic').appendChild(o);
+  });
+}
+</script>
+</body>
+</html>
