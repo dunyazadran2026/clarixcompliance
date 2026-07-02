@@ -1,26 +1,25 @@
 # Clarix Compliance Website
 
-Static multi-page website for clarixcompliance.com.
+Static GitHub Pages website for clarixcompliance.com.
 
-## Pages
-- Home
-- Medical Device
-- Pharma
-- AI Governance
-- About
-- Upcoming Workshops
-- Contact
+## Files
+- index.html
+- styles.css
+- script.js
+- favicon.svg
+- CNAME
+- 404.html
 
-## Deployment via GitHub Pages
-1. Create a GitHub repository.
-2. Upload all files from this package to the repository root.
+## Deploy on GitHub Pages
+1. Create a public repository, e.g. `clarixcompliance.com`.
+2. Upload all files to the repository root.
 3. Go to Settings → Pages.
 4. Source: Deploy from branch.
 5. Branch: main / root.
-6. Add custom domain: clarixcompliance.com.
-7. Configure DNS at your domain provider.
+6. Custom domain: clarixcompliance.com.
+7. Add DNS records at your domain provider.
+8. Enable Enforce HTTPS when available.
 
-## Important edits before publishing
-- Replace the placeholder calendar link (`https://calendly.com/`) with your real booking link.
-- Review all service text before public launch.
-- If you want a real backend contact form, connect Formspree, Netlify Forms or another form service.
+## Important edits
+- Replace the placeholder Calendly link with your real booking link.
+- Review service text before launch.
