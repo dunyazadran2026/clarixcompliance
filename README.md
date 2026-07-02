@@ -8,6 +8,7 @@ Static GitHub Pages website for clarixcompliance.com.
 - script.js
 - favicon.svg
 - CNAME
+- README.md
 - 404.html
 
 ## Deploy on GitHub Pages
