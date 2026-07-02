@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="da" id="html-root">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clarix Compliance Consulting</title>
+  <meta name="description" content="Uafhængig regulatory consultancy for MedTech og Pharma — MDR/IVDR, ISO 13485, EU AI Act, GxP."/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="site-nav"></div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <!-- Brand pattern background -->
+  <div id="hero-pattern" style="position:absolute;inset:0;z-index:0;opacity:.07;pointer-events:none;"></div>
+
+  <div class="wrap hero-inner">
+    <!-- Left: copy -->
+    <div>
+      <div class="hero-label" id="h-eyebrow"></div>
+      <h1 id="h-h1"></h1>
+      <p class="hero-sub" id="h-sub"></p>
+      <div class="hero-actions" id="h-actions"></div>
+    </div>
+    <!-- Right: booking card -->
+    <div class="booking-card">
+      <h3 id="bk-h3"></h3>
+      <p id="bk-p"></p>
+      <a href="https://calendly.com/dunyazadran" target="_blank" rel="noopener"
+         class="btn btn-navy" id="bk-btn1"></a>
+      <a href="contact.html" class="btn btn-outline" id="bk-btn2"
+         style="width:100%;justify-content:center;"></a>
+      <p class="booking-note" id="bk-note"></p>
+    </div>
+  </div>
+
+  <!-- Badge strip -->
+  <div class="badge-strip">
+    <div class="wrap">
+      <div class="badge-row">
+        <span class="badge">EU MDR 2017/745</span>
+        <span class="badge">IVDR 2017/746</span>
+        <span class="badge">ISO 13485</span>
+        <span class="badge">ISO 14971</span>
+        <span class="badge">EU AI Act</span>
+        <span class="badge">ISO 42001</span>
+        <span class="badge">GxP / GMP / GDP</span>
+        <span class="badge">Generic Pharma · LCM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUOTES ── -->
+<section class="section section-grey">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" id="q-ey"></span>
+      <h2 class="section-title" id="q-ti"></h2>
+    </div>
+    <div class="quotes-row" id="quotes-row"></div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section section-white">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" id="sv-ey"></span>
+      <h2 class="section-title" id="sv-ti"></h2>
+      <p class="section-sub" id="sv-sub"></p>
+    </div>
+    <div class="services-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<section class="section section-navy">
+  <!-- Brand pattern on navy -->
+  <div id="stats-pattern" style="position:absolute;inset:0;opacity:.1;pointer-events:none;"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <div class="section-head center">
+      <span class="eyebrow eyebrow-white" id="st-ey"></span>
+      <h2 class="section-title section-title-white" id="st-ti"></h2>
+    </div>
+    <div class="stats-grid" id="stats-grid"></div>
+  </div>
+</section>
+
+<!-- ── ABOUT STRIP ── -->
+<section class="section section-grey">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" id="about-strip-grid">
+      <div>
+        <span class="eyebrow" id="ab-ey"></span>
+        <h2 class="section-title" id="ab-ti"></h2>
+        <p class="section-sub" id="ab-s1" style="max-width:100%;margin-bottom:12px;"></p>
+        <p class="section-sub" id="ab-s2" style="max-width:100%;"></p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;" id="ab-btns"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;" id="ab-blocks"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="section section-white">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow" id="ts-ey"></span>
+      <h2 class="section-title" id="ts-ti"></h2>
+    </div>
+    <div class="testi-grid" id="testi-grid"></div>
+  </div>
+</section>
+
+<!-- ── INSIGHTS TEASER ── -->
+<section class="section section-grey">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" id="in-ey"></span>
+      <h2 class="section-title" id="in-ti"></h2>
+    </div>
+    <div class="insights-grid" id="insights-grid"></div>
+    <div style="margin-top:32px;" id="in-more"></div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner" style="position:relative;">
+  <div id="cta-pattern" style="position:absolute;inset:0;opacity:.08;pointer-events:none;"></div>
+  <div class="wrap cta-inner">
+    <h2 id="cta-h2"></h2>
+    <p id="cta-p"></p>
+    <a href="https://calendly.com/dunyazadran" target="_blank" rel="noopener" class="btn btn-teal" id="cta-btn"></a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/brand.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+// Set html lang
+document.getElementById('html-root').lang = window.currentLang;
+
+// Render nav + footer
+renderNav('nav_home');
+renderFooter();
+
+// Brand patterns
+document.getElementById('hero-pattern').innerHTML = Brand.brandPattern('hp1','#FFFFFF','#1C8C8C');
+document.getElementById('cta-pattern').innerHTML  = Brand.brandPattern('cp1','#FFFFFF','#1C8C8C');
+
+// Hero
+document.getElementById('h-eyebrow').textContent = t('hero_eyebrow');
+document.getElementById('h-h1').innerHTML =
+  `${t('hero_h1_a')} <span>${t('hero_h1_b')}</span>`;
+document.getElementById('h-sub').textContent = t('hero_sub');
+document.getElementById('h-actions').innerHTML = `
+  <a href="medical-devices.html" class="btn btn-teal">${t('hero_btn1')}</a>
+  <a href="pharma.html" class="btn btn-ghost">${t('hero_btn2')}</a>
+  <a href="ai.html" class="btn btn-ghost">${t('hero_btn3')}</a>`;
+
+// Booking
+document.getElementById('bk-h3').textContent = t('book_h3');
+document.getElementById('bk-p').textContent  = t('book_p');
+document.getElementById('bk-btn1').textContent = t('book_btn1');
+document.getElementById('bk-btn1').style.cssText = 'width:100%;justify-content:center;margin-bottom:10px;';
+document.getElementById('bk-btn2').textContent = t('book_btn2');
+document.getElementById('bk-note').innerHTML =
+  `${t('book_note')} <a href="https://www.linkedin.com/in/dunyazadran" target="_blank" rel="noopener">LinkedIn</a>`;
+
+// Quotes
+const quotes = window.currentLang === 'da' ? [
+  { q:'"Dunya kom ind, da vi stod 6 uger fra en notified body-vurdering med væsentlige mangler i vores tekniske dokumentation. Hun prioriterede det rigtige og vi gik ind til vurderingen med fuld tillid."', s:'Regulatory Affairs Director · MedTech, Danmark' },
+  { q:'"Hendes MDR gap-analyse var den mest grundige vi har set. Hun ved præcis, hvad notified bodies kigger efter."', s:'VP Quality · Europæisk medicinsk udstyrsfirma' },
+  { q:'"AI governance-workshoppen var den mest praktisk nyttige session vi har haft i år. Ingen buzz-ord — bare et klart compliance-framework."', s:'VP Quality & Regulatory · Pharma, Sverige' },
+  { q:'"Senior ekspertise uden overhead af en fast stilling. Integreret hurtigt, forstod vores produktportefølje og leverede dokumentation vi kunne indsende med det samme."', s:'CEO · Early-stage MedTech' },
+  { q:'"Vi tog Dunya ind til en GxP compliance-gennemgang inden en stor myndighedsinspektion. Forberedelsen var grundig og inspektionen forløb gnidningsfrit."', s:'QA Manager · Farmaceutisk distributør' },
+] : [
+  { q:'"Dunya came in when we had a notified body assessment looming with significant gaps. She prioritised what mattered and we went into the assessment with full confidence."', s:'Regulatory Affairs Director · MedTech, Denmark' },
+  { q:'"Her MDR gap analysis was the most thorough we have seen. She clearly knows what notified bodies look for."', s:'VP Quality · European Medical Device Company' },
+  { q:'"The AI compliance workshop was the most practically useful session we have had all year. No buzzwords — just a clear, compliance-first framework."', s:'VP Quality & Regulatory · Pharma, Sweden' },
+  { q:'"Senior expertise without the overhead of a permanent hire. Embedded quickly, understood our portfolio, and delivered documentation we could submit straight away."', s:'CEO · Early-stage MedTech' },
+  { q:'"We brought Dunya in for a GxP compliance review ahead of a major authority inspection. The preparation was thorough and the inspection went smoothly."', s:'QA Manager · Pharmaceutical Distributor' },
+];
+document.getElementById('q-ey').textContent = t('quotes_eyebrow');
+document.getElementById('q-ti').textContent = t('quotes_title');
+document.getElementById('quotes-row').innerHTML = quotes.map(q =>
+  `<div class="quote-card"><blockquote>${q.q}</blockquote><div class="quote-source">${q.s}</div></div>`
+).join('');
+
+// Services
+document.getElementById('sv-ey').textContent = t('services_eyebrow');
+document.getElementById('sv-ti').textContent = t('services_title');
+document.getElementById('sv-sub').textContent = t('services_sub');
+const svcs = [
+  { icon:'mdr',        name:'svc1_name', desc:'svc1_desc', link:'svc1_link', href:'medical-devices.html' },
+  { icon:'regulatory', name:'svc2_name', desc:'svc2_desc', link:'svc2_link', href:'pharma.html' },
+  { icon:'ai',         name:'svc3_name', desc:'svc3_desc', link:'svc3_link', href:'ai.html' },
+  { icon:'quality',    name:'svc4_name', desc:'svc4_desc', link:'svc4_link', href:'medical-devices.html#qms' },
+  { icon:'aiact',      name:'svc5_name', desc:'svc5_desc', link:'svc5_link', href:'ai.html#workshops' },
+  { icon:'strategy',   name:'svc6_name', desc:'svc6_desc', link:'svc6_link', href:'contact.html' },
+];
+document.getElementById('services-grid').innerHTML = svcs.map(s => `
+  <a href="${s.href}" class="svc-card">
+    <div class="svc-icon-wrap">${Brand.svcIcon(s.icon, 32)}</div>
+    <h3>${t(s.name)}</h3>
+    <p>${t(s.desc)}</p>
+    <span class="svc-link">${t(s.link)}</span>
+  </a>`).join('');
+
+// Stats
+document.getElementById('st-ey').textContent = t('stats_eyebrow');
+document.getElementById('st-ti').textContent = t('stats_title');
+document.getElementById('stats-grid').innerHTML = [1,2,3,4].map(i => `
+  <div class="stat-item">
+    <div class="stat-num">${t('stat'+i+'_num')}</div>
+    <div class="stat-label">${t('stat'+i+'_lbl')}</div>
+  </div>`).join('');
+
+// About strip
+document.getElementById('ab-ey').textContent = t('about_eyebrow');
+document.getElementById('ab-ti').textContent = t('about_title');
+document.getElementById('ab-s1').textContent = t('about_sub1');
+document.getElementById('ab-s2').textContent = t('about_sub2');
+document.getElementById('ab-btns').innerHTML = `
+  <a href="about.html" class="btn btn-navy">${t('about_btn1')}</a>
+  <a href="contact.html" class="btn btn-outline">${t('about_btn2')}</a>`;
+
+const abBlocks = window.currentLang === 'da' ? [
+  { tag:'Process-AI', txt:'AI som assisterende værktøj i styrede, reviderbare workflows — ikke en autonom beslutningstrager. Menneskelig gennemgang ved hvert kritisk punkt.' },
+  { tag:'Sporbarhed', txt:'Alle leverancer er sporbare, versionerede og forsvarlige under regulatorisk granskning — fra dag ét.' },
+  { tag:'Audit-klar', txt:'Dokumentation struktureret for slutlæseren: notified body-assessoren, myndigheds-inspektøren, den interne auditor.' },
+] : [
+  { tag:'Process-AI', txt:'AI as an assistive tool within governed, auditable workflows — not an autonomous decision-maker. Human review at every critical point.' },
+  { tag:'Traceability', txt:'Every deliverable is traceable, versioned, and defensible under regulatory scrutiny — from day one.' },
+  { tag:'Audit-Ready', txt:'Documentation structured for the end reader: the notified body assessor, the authority inspector, the internal auditor.' },
+];
+document.getElementById('ab-blocks').innerHTML = abBlocks.map((b,i) => `
+  <div style="background:${i===0?'rgba(28,140,140,.07)':'#f5f7fa'};border-left:3px solid ${i===0?'#1C8C8C':'rgba(22,58,95,.15)'};border-radius:2px;padding:20px 22px;">
+    <span class="eyebrow" style="margin-bottom:6px;">${b.tag}</span>
+    <p style="font-size:12px;font-weight:300;color:#8B9BB4;line-height:1.65;">${b.txt}</p>
+  </div>`).join('');
+
+// Testimonials
+document.getElementById('ts-ey').textContent = t('testi_eyebrow');
+document.getElementById('ts-ti').textContent = t('testi_title');
+const testis = window.currentLang === 'da' ? [
+  { i:'RA', q:'"Vi stod 6 uger fra en notified body-vurdering med væsentlige mangler. Dunya kom ind, prioriterede det rigtige og vi gik ind til vurderingen med fuld tillid. Præcis den senior-støtte vi havde brug for."', n:'Regulatory Affairs Director', r:'MedTech · Danmark' },
+  { i:'VP', q:'"AI compliance-workshoppen var den mest praktisk nyttige session vi har haft hele året. Ingen buzz-ord — bare et klart, compliance-first framework som vi kunne anvende direkte efterfølgende."', n:'VP Quality & Regulatory', r:'Pharma · Sverige' },
+  { i:'CE', q:'"Som startup havde vi brug for én, der kunne bygge vores QMS fra bunden og forstå vores produkt på samme tid. Dunya gjorde begge dele — og ISO 13485-implementeringen har bestået enhver audit siden."', n:'CEO & Co-Founder', r:'Early-stage MedTech · Tyskland' },
+  { i:'QA', q:'"Hendes risikobaserede tilgang til vores GxP compliance-gennemgang inden en stor myndighedsinspektion var præcis rigtigt. Forberedelsen var grundig, dokumentationen var audit-klar og inspektionen forløb gnidningsfrit."', n:'Quality Assurance Manager', r:'Farmaceutisk distributør · Holland' },
+] : [
+  { i:'RA', q:'"We were six weeks from a notified body assessment with significant documentation gaps. Dunya came in, prioritised what mattered, and we went into the assessment with full confidence. Exactly the senior support we needed."', n:'Regulatory Affairs Director', r:'MedTech · Denmark' },
+  { i:'VP', q:'"The AI compliance workshop was the most practically useful session we have had all year. No buzzwords — just a clear, compliance-first framework that we could apply directly the following week."', n:'VP Quality & Regulatory', r:'Pharma · Sweden' },
+  { i:'CE', q:'"As a startup, we needed someone who could build our QMS from the ground up and understand our product at the same time. Dunya did both — and the ISO 13485 implementation has stood up to every audit since."', n:'CEO & Co-Founder', r:'Early-stage MedTech · Germany' },
+  { i:'QA', q:'"Her risk-based approach to our GxP compliance review was exactly right. The preparation was thorough, the documentation was audit-ready, and the inspection went smoothly."', n:'Quality Assurance Manager', r:'Pharmaceutical Distributor · Netherlands' },
+];
+document.getElementById('testi-grid').innerHTML = testis.map(t2 => `
+  <div class="testi-card">
+    <div class="testi-stars">★★★★★</div>
+    <blockquote>${t2.q}</blockquote>
+    <div class="testi-author">
+      <div class="testi-avatar">${t2.i}</div>
+      <div><div class="testi-name">${t2.n}</div><div class="testi-role">${t2.r}</div></div>
+    </div>
+  </div>`).join('');
+
+// Insights teaser
+document.getElementById('in-ey').textContent = t('insights_eyebrow');
+document.getElementById('in-ti').textContent = t('insights_title');
+const ins = window.currentLang === 'da' ? [
+  { tag:'EU AI Act',    h:'Hvad EU AI Act betyder for producenter af medicinsk udstyr i 2025', p:'AI indlejret i klinisk beslutningsstøtte udløser specifikke conformity-forpligtelser. Denne artikel kortlægger overlappet med MDR.', d:'Juni 2025' },
+  { tag:'MDR',          h:'Teknisk dokumentation under MDR Annex II: en praktisk tjekliste', p:'Kløften mellem hvad teams tror er tilstrækkeligt og hvad notified bodies kræver — er der fejlene sker.', d:'Maj 2025' },
+  { tag:'AI Governance',h:'Process-AI vs Product-AI: den distinktion der ændrer alt', p:'At få denne klassificering forkert betyder at anvende den forkerte regulatoriske ramme — med konsekvenser for hele dit compliance-setup.', d:'April 2025' },
+] : [
+  { tag:'EU AI Act',    h:'What the EU AI Act means for Medical Device manufacturers in 2025', p:'AI in clinical decision support triggers specific conformity obligations. This maps the overlap with MDR — and where the gaps are.', d:'June 2025' },
+  { tag:'MDR',          h:'Technical Documentation under MDR Annex II: a practitioner\'s checklist', p:'The gap between what teams think is sufficient and what notified bodies require is where delays happen.', d:'May 2025' },
+  { tag:'AI Governance',h:'Process-AI vs Product-AI: the distinction that changes everything', p:'Getting this classification wrong means applying the wrong regulatory framework entirely — with audit consequences.', d:'April 2025' },
+];
+document.getElementById('insights-grid').innerHTML = ins.map(i => `
+  <a href="insights.html" class="insight-card">
+    <span class="insight-tag">${i.tag}</span>
+    <h4>${i.h}</h4>
+    <p>${i.p}</p>
+    <div class="insight-date">${i.d}</div>
+  </a>`).join('');
+document.getElementById('in-more').innerHTML =
+  `<a href="insights.html" class="btn btn-outline">${t('insights_more')}</a>`;
+
+// CTA
+document.getElementById('cta-h2').textContent = t('cta_h2');
+document.getElementById('cta-p').textContent  = t('cta_p');
+document.getElementById('cta-btn').textContent = t('cta_btn');
+</script>
+</body>
+</html>
