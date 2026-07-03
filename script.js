@@ -564,8 +564,8 @@ function buildAI(){
   const compTopics = L==='da' ? compTopics_da : compTopics_en;
   const leadTopics = L==='da' ? leadTopics_da : leadTopics_en;
 
-  const mailto_comp = 'mailto:dunya.zadran@clarixcompliance.com?subject=Compliance%20AI%20Workshop&body='+encodeURIComponent('Information to provide:\n\n• Participant name(s)\n• Participant email(s)\n• Billing email\n• CVR number');
-  const mailto_lead = 'mailto:dunya.zadran@clarixcompliance.com?subject=Ledelses%20AI%20Workshop&body='+encodeURIComponent('Oplysninger ved tilmelding:\n\n• Navn på deltagere\n• Email på deltagere\n• Fakturerings-email\n• CVR nummer');
+  const mailto_comp = 'mailto:dunya.zadran@outlook.dk?subject=Compliance%20AI%20Workshop&body='+encodeURIComponent('Information to provide:\n\n• Participant name(s)\n• Participant email(s)\n• Billing email\n• CVR number');
+  const mailto_lead = 'mailto:dunya.zadran@outlook.dk?subject=Ledelses%20AI%20Workshop&body='+encodeURIComponent('Oplysninger ved tilmelding:\n\n• Navn på deltagere\n• Email på deltagere\n• Fakturerings-email\n• CVR nummer');
 
   const checkIcon = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="8" cy="8" r="7.5" stroke="#1C8C8C" stroke-width="1"/><path d="M4.5 8l2.5 2.5 4.5-4.5" stroke="#1C8C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
