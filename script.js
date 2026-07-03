@@ -1,4 +1,3 @@
-cat > /home/claude/clarix-flat/script.js << 'ENDOFSCRIPT'
 /* ================================================
    CLARIX COMPLIANCE — script.js  v3
    6 updates:
