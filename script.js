@@ -485,6 +485,67 @@ function buildPharma(){
   injectPat('ph-ph-cta','#FFFFFF','#1C8C8C');
 }
 
+function switchAIWorkshop(id){
+  const panels = ['ai-workshop-1','ai-workshop-2'];
+  panels.forEach(pid => {
+    const panel = document.getElementById(pid);
+    if(panel) panel.style.display = (pid === id) ? 'block' : 'none';
+  });
+  document.querySelectorAll('.ai-workshop-tab').forEach(btn => {
+    const active = btn.getAttribute('data-target') === id;
+    btn.style.background = active ? '#163A5F' : '#FFFFFF';
+    btn.style.color = active ? '#FFFFFF' : '#163A5F';
+    btn.style.borderColor = active ? '#163A5F' : 'rgba(22,58,95,.12)';
+  });
+}
+
+function aiWorkshopTabs(){
+  const L = lang;
+  return `
+    <section class="sec sec-grey" style="padding-top:34px;padding-bottom:34px;">
+      <div class="w">
+        <div style="background:#FFFFFF;border:1px solid rgba(22,58,95,.08);border-radius:2px;padding:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+          <span class="eyebrow" style="margin:0 12px 0 0;">${L==='da'?'Vælg workshop':'Select workshop'}</span>
+          <button class="ai-workshop-tab" data-target="ai-workshop-1" onclick="switchAIWorkshop('ai-workshop-1')" style="background:#163A5F;color:#FFFFFF;border:1px solid #163A5F;border-radius:2px;padding:12px 18px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:.03em;cursor:pointer;">
+            ${L==='da'?'AI i RA/QA workflows':'AI in RA/QA workflows'}
+          </button>
+          <button class="ai-workshop-tab" data-target="ai-workshop-2" onclick="switchAIWorkshop('ai-workshop-2')" style="background:#FFFFFF;color:#163A5F;border:1px solid rgba(22,58,95,.12);border-radius:2px;padding:12px 18px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;letter-spacing:.03em;cursor:pointer;">
+            ${L==='da'?'EU AI Act readiness':'EU AI Act readiness'}
+          </button>
+        </div>
+      </div>
+    </section>`;
+}
+
+function workshopPanel(id, title, label, intro, bullets, outcome, display='block'){
+  return `
+    <div id="${id}" class="ai-workshop-panel" style="display:${display};">
+      <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start;margin-bottom:36px;">
+        <div>
+          <span class="eyebrow">${label}</span>
+          <h2 style="font-family:'Outfit',sans-serif;font-weight:300;font-size:34px;line-height:1.2;color:#163A5F;margin:0 0 18px;">${title}</h2>
+          <p style="font-size:14px;font-weight:300;color:#8B9BB4;line-height:1.75;max-width:680px;">${intro}</p>
+        </div>
+        <div style="background:#F5F7FA;border:1px solid rgba(22,58,95,.08);border-radius:2px;padding:26px;">
+          <h4 style="font-family:'Outfit',sans-serif;font-size:16px;font-weight:400;color:#163A5F;margin:0 0 14px;">${lang==='da'?'Hvad deltagerne får ud af det':'What participants get'}</h4>
+          <p style="font-size:12px;font-weight:300;color:#8B9BB4;line-height:1.7;margin:0;">${outcome}</p>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;">
+        ${bullets.map((b,i)=>`
+          <div style="background:${i===0?'rgba(28,140,140,.07)':'#FFFFFF'};border:1px solid ${i===0?'rgba(28,140,140,.2)':'rgba(22,58,95,.08)'};border-left:3px solid ${i===0?'#1C8C8C':'rgba(22,58,95,.16)'};border-radius:2px;padding:22px;min-height:150px;">
+            <span class="eyebrow" style="margin-bottom:8px;">0${i+1}</span>
+            <h3 style="font-family:'Outfit',sans-serif;font-weight:400;font-size:16px;color:#163A5F;margin:0 0 8px;">${b.h}</h3>
+            <p style="font-size:12px;font-weight:300;color:#8B9BB4;line-height:1.7;margin:0;">${b.p}</p>
+          </div>`).join('')}
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a class="btn btn-navy" href="mailto:Dunya.zadran@outlook.dk?subject=tilmelding%20til%20workshop&body=Oplysninger%20der%20skal%20oplyses%20ved%20tilmelding:%0A%0A%E2%80%A2%20Navn%20p%C3%A5%20deltagere%0A%E2%80%A2%20Email%20p%C3%A5%20deltagere%0A%E2%80%A2%20Fakturerings-email%0A%E2%80%A2%20CVR%20nummer">${lang==='da'?'Tilmeld workshop':'Register for workshop'}</a>
+        <button class="btn btn-outline" onclick="showPage('contact')">${lang==='da'?'Spørg om workshop':'Ask about workshop'}</button>
+      </div>
+    </div>`;
+}
+
 function buildAI(){
   const L=lang;
 
