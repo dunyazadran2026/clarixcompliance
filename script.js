@@ -485,6 +485,23 @@ function buildPharma(){
   injectPat('ph-ph-cta','#FFFFFF','#1C8C8C');
 }
 
+
+function showAIWorkshop(id) {
+  document.querySelectorAll('.ai-workshop-panel').forEach(panel => {
+    panel.style.display = 'none';
+  });
+
+  document.querySelectorAll('.ai-workshop-tab').forEach(tab => {
+    tab.classList.remove('active');
+  });
+
+  const selectedPanel = document.getElementById(id);
+  if (selectedPanel) selectedPanel.style.display = 'block';
+
+  const selectedTab = document.querySelector(`[data-workshop="${id}"]`);
+  if (selectedTab) selectedTab.classList.add('active');
+}
+
 function buildAI(){
   const L=lang;
 
