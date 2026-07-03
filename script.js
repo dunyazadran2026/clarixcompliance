@@ -586,7 +586,119 @@ function buildAI(){
       ? 'To specialiserede workshops leveret af Clarix Compliance — én for RA/QA-fagfolk i regulerede miljøer, én for ledere og selvstændige. Begge er praktiske, compliance-orienterede og direkte anvendelige fra dag ét.'
       : 'Two specialised workshops delivered by Clarix Compliance — one for RA/QA professionals in regulated environments, one for leaders and independents. Both are practical, compliance-oriented, and directly applicable from day one.',
     'ph-ai'
-  )}
+  )
+  
+`
+<section class="ai-workshop-nav">
+  <div class="w">
+    <div class="ai-workshop-nav-inner">
+      <button 
+        class="ai-workshop-tab active" 
+        data-workshop="workshop-ai-workflows"
+        onclick="showAIWorkshop('workshop-ai-workflows')">
+        ${L==='da' ? 'AI i RA/QA workflows' : 'AI in RA/QA workflows'}
+      </button>
+
+      <button 
+        class="ai-workshop-tab" 
+        data-workshop="workshop-ai-act"
+        onclick="showAIWorkshop('workshop-ai-act')">
+        ${L==='da' ? 'EU AI Act readiness' : 'EU AI Act readiness'}
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white">
+  <div class="w">
+
+    <div id="workshop-ai-workflows" class="ai-workshop-panel active">
+      <span class="eyebrow">Workshop 01</span>
+      <h2 class="sec-title">
+        ${L==='da' ? 'AI i RA/QA workflows' : 'AI in RA/QA workflows'}
+      </h2>
+      <p class="sec-sub">
+        ${L==='da'
+          ? 'En praktisk workshop for RA/QA-teams, der vil bruge AI som et assisterende værktøj uden at miste kontrol, sporbarhed eller compliance.'
+          : 'A practical workshop for RA/QA teams that want to use AI as an assistive tool without losing control, traceability or compliance.'}
+      </p>
+
+      <div class="ai-workshop-grid">
+        <div class="ai-workshop-card">
+          <h3>01 · AI as assistant</h3>
+          <p>
+            ${L==='da'
+              ? 'Brug AI til udkast, struktur, research og gap-analyser — aldrig som endelig sandhed.'
+              : 'Use AI for drafts, structure, research and gap analysis — never as final truth.'}
+          </p>
+        </div>
+
+        <div class="ai-workshop-card">
+          <h3>02 · Human review</h3>
+          <p>
+            ${L==='da'
+              ? 'Design review-punkter, verifikation og dokumenteret menneskelig kontrol.'
+              : 'Design review points, verification and documented human oversight.'}
+          </p>
+        </div>
+
+        <div class="ai-workshop-card">
+          <h3>03 · QMS integration</h3>
+          <p>
+            ${L==='da'
+              ? 'Kobl AI workflows til SOPer, change control, dokumentstyring og audit trail.'
+              : 'Connect AI workflows to SOPs, change control, document control and audit trail.'}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="workshop-ai-act" class="ai-workshop-panel">
+      <span class="eyebrow">Workshop 02</span>
+      <h2 class="sec-title">
+        ${L==='da' ? 'EU AI Act readiness' : 'EU AI Act readiness'}
+      </h2>
+      <p class="sec-sub">
+        ${L==='da'
+          ? 'En ledelses- og compliance-orienteret workshop om AI Act-risici, governance, human oversight og dokumentationskrav.'
+          : 'A leadership and compliance-focused workshop on AI Act risks, governance, human oversight and documentation requirements.'}
+      </p>
+
+      <div class="ai-workshop-grid">
+        <div class="ai-workshop-card">
+          <h3>01 · Risk classification</h3>
+          <p>
+            ${L==='da'
+              ? 'Forstå minimal, begrænset, høj og uacceptabel risiko — og hvad det betyder i praksis.'
+              : 'Understand minimal, limited, high and unacceptable risk — and what it means in practice.'}
+          </p>
+        </div>
+
+        <div class="ai-workshop-card">
+          <h3>02 · Governance controls</h3>
+          <p>
+            ${L==='da'
+              ? 'Krav til transparens, datakvalitet, human oversight, træning og dokumentation.'
+              : 'Requirements for transparency, data quality, human oversight, training and documentation.'}
+          </p>
+        </div>
+
+        <div class="ai-workshop-card">
+          <h3>03 · Readiness roadmap</h3>
+          <p>
+            ${L==='da'
+              ? 'Lav en konkret handlingsplan for AI-systemer, ansvar, kontroller og audit trail.'
+              : 'Build a concrete action plan for AI systems, ownership, controls and audit trail.'}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+`
++
+}
 
   <!-- ── WORKSHOP OVERVIEW CARDS ── -->
   <section class="sec sec-grey">
