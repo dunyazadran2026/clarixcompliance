@@ -1,4 +1,4 @@
-cat > /home/claude/clarix-flat/script.js << 'ENDOFSCRIPT'
+
 /* ================================================
    CLARIX COMPLIANCE — script.js  v3
    6 updates:
@@ -1034,5 +1034,4 @@ function renderAll(){
 }
 
 document.addEventListener('DOMContentLoaded',renderAll);
-ENDOFSCRIPT
-echo "script.js written: $(wc -l < /home/claude/clarix-flat/script.js) lines"
+
