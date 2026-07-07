@@ -283,33 +283,33 @@ function buildHome(){
   const slides=[
     {
       img:'artificial intelligence technology',
-      ey:L==='da'?'AI Workshops':'AI Workshops',
+      ey:L==='da'?'Optimering af arbejdsgange':'Workflow optimisation',
       h:L==='da'?'AI Masterclass —  praktisk workshop':'AI Masterclass — Hands-on workshop',
-      p:L==='da'?'To specialiserede workshops for RA/QA-fagfolk og ledere. Praktiske, compliance-orienterede og direkte anvendelige fra dag ét.':'Two specialised workshops for RA/QA professionals and leaders. Practical, compliance-oriented and directly applicable from day one.',
+      p:L==='da'?'Lær at bruge AI sikkert og effektivt gennem praktiske øvelser og konkrete arbejdsopgaver og direkte anvendelige fra dag ét.':'Learn how to use AI safely and effectively through practical exercises, real-world business scenarios and directly applicable from day one.',
       btn:L==='da'?'Se workshops':'View workshops',page:'ai',
       accent:'#1C8C8C'
     },
     {
       img:'medical device laboratory technology',
-      ey:L==='da'?'Medicinsk udstyr':'Medical Devices',
+      ey:L==='da'?'Forretningsværdi':'Business value',
       h:L==='da'?'AI Strategi – Fra ambition til handling':'AI Strategy – From Vision to Execution',
-      p:L==='da'?'Senior regulatory support til teknisk dokumentation, notified body-forberedelse og post-market overvågning.':'Senior regulatory support for technical documentation, notified body preparation and post-market surveillance.',
+      p:L==='da'?'Udvikl en klar AI-strategi, der understøtter jeres forretningsmål og skaber målbar værdi.':'Develop a clear AI strategy that aligns with your business objectives and delivers measurable value.',
       btn:L==='da'?'Medicinsk udstyr':'Medical Devices',page:'devices',
       accent:'#163A5F'
     },
     {
       img:'pharmaceutical quality compliance',
-      ey:'Pharma & GxP',
+      ey:L==='da'?'Ansvarlig AI':'Responsible AI',
       h:L==='da'?'AI Governance – Ansvarlig og compliant AI':'AI Governance – Responsible and Compliant AI',
-      p:L==='da'?'Indsendelser, livscyklushåndtering, GMP/GDP-compliance og regulatory strategi for farmaceutiske producenter.':'Submissions, lifecycle management, GMP/GDP compliance and regulatory strategy for pharmaceutical manufacturers.',
+      p:L==='da'?'Etabler en enkel og robust governance-model, der sikrer ansvarlig, compliant og kontrolleret brug af AI.':'Establish a practical governance framework that enables responsible, compliant and controlled AI adoption.',
       btn:L==='da'?'Pharma & GxP':'Pharma & GxP',page:'pharma',
       accent:'#2E8B57'
     },
     {
       img:'business ai governance leadership',
-      ey:L==='da'?'AI Governance':'AI Governance',
+      ey:L==='da'?'Praktisk implementering':'Practical implementation',
       h:L==='da'?'AI Implementering – Integreret i jeres arbejdsprocesser':'AI Implementation – Embedded into Your Workflows',
-      p:L==='da'?'Kortlæg din AI-portefølje, klassificer systemerne korrekt og byg governance-strukturer der holder under revision.':'Map your AI portfolio, classify systems correctly and build governance structures that hold up under audit.',
+      p:L==='da'?'Omsæt AI til konkrete arbejdsgange, der effektiviserer processer og styrker kvaliteten i hverdagen.':'Turn AI into practical workflows that improve efficiency, consistency and everyday productivity.',
       btn:L==='da'?'AI Governance':'AI Governance',page:'ai',
       accent:'#1C8C8C'
     }
