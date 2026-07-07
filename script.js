@@ -404,15 +404,15 @@ function buildHome(){
       ${slides.map((_,i)=>`<button id="dot-${i}" onclick="goSlide(${i})" style="width:${i===0?28:8}px;height:8px;border-radius:4px;border:none;cursor:pointer;background:${i===0?'#1C8C8C':'rgba(255,255,255,.35)'};transition:all .3s;"></button>`).join('')}
     </div>
     <!-- Arrows -->
-    <button onclick="goSlide((slideIdx-1+4)%4)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:40px;height:40px;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(4px);z-index:10;">‹</button>
-    <button onclick="goSlide((slideIdx+1)%4)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:40px;height:40px;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(4px);z-index:10;">›</button>
+    <button onclick="goSlide((slideIdx-1+4)%4)" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:40px;height:40px;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(4px);z-index:10;">‹</button>
+    <button onclick="goSlide((slideIdx+1)%4)" style="position:absolute;right:22px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:40px;height:40px;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(4px);z-index:10;">›</button>
     <!-- Badges -->
     <div style="position:absolute;bottom:0;left:0;right:0;border-top:1px solid rgba(255,255,255,.08);padding:12px 0;background:rgba(14,42,71,.6);backdrop-filter:blur(8px);">
       <div class="w"><div class="badge-row">
         <span class="badge">Microsoft Copilot</span><span class="badge">ChatGPT</span>
         <span class="badge">Claude</span><span class="badge">AI Tools</span>
         <span class="badge">EU AI Act</span><span class="badge">MDR</span>
-        <span class="badge">GxP / GMP</span> <span class="badge">Generic Pharma · LCM</span>
+        <span class="badge">GxP / GMP</span> 
       </div></div>
     </div>
   </section>
