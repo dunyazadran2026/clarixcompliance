@@ -284,7 +284,7 @@ function buildHome(){
     {
       img:'artificial intelligence technology',
       ey:L==='da'?'AI Workshops':'AI Workshops',
-      h:L==='da'?'AI i praksis — workshops der virker':'AI in practice — workshops that work',
+      h:L==='da'?'AI Masterclass —  praktisk workshop':'AI Masterclass — Hands-on workshop',
       p:L==='da'?'To specialiserede workshops for RA/QA-fagfolk og ledere. Praktiske, compliance-orienterede og direkte anvendelige fra dag ét.':'Two specialised workshops for RA/QA professionals and leaders. Practical, compliance-oriented and directly applicable from day one.',
       btn:L==='da'?'Se workshops':'View workshops',page:'ai',
       accent:'#1C8C8C'
@@ -292,7 +292,7 @@ function buildHome(){
     {
       img:'medical device laboratory technology',
       ey:L==='da'?'Medicinsk udstyr':'Medical Devices',
-      h:L==='da'?'MDR/IVDR compliance — audit-klar fra dag ét':'MDR/IVDR compliance — audit-ready from day one',
+      h:L==='da'?'AI Strategi – Fra ambition til handling':'AI Strategy – From Vision to Execution',
       p:L==='da'?'Senior regulatory support til teknisk dokumentation, notified body-forberedelse og post-market overvågning.':'Senior regulatory support for technical documentation, notified body preparation and post-market surveillance.',
       btn:L==='da'?'Medicinsk udstyr':'Medical Devices',page:'devices',
       accent:'#163A5F'
@@ -300,7 +300,7 @@ function buildHome(){
     {
       img:'pharmaceutical quality compliance',
       ey:'Pharma & GxP',
-      h:L==='da'?'GxP compliance og generisk pharma':'GxP compliance and generic pharma',
+      h:L==='da'?'AI Governance – Ansvarlig og compliant AI':'AI Governance – Responsible and Compliant AI',
       p:L==='da'?'Indsendelser, livscyklushåndtering, GMP/GDP-compliance og regulatory strategi for farmaceutiske producenter.':'Submissions, lifecycle management, GMP/GDP compliance and regulatory strategy for pharmaceutical manufacturers.',
       btn:L==='da'?'Pharma & GxP':'Pharma & GxP',page:'pharma',
       accent:'#2E8B57'
@@ -308,7 +308,7 @@ function buildHome(){
     {
       img:'business ai governance leadership',
       ey:L==='da'?'AI Governance':'AI Governance',
-      h:L==='da'?'EU AI Act beredskab for din organisation':'EU AI Act readiness for your organisation',
+      h:L==='da'?'AI Implementering – Integreret i jeres arbejdsprocesser':'AI Implementation – Embedded into Your Workflows',
       p:L==='da'?'Kortlæg din AI-portefølje, klassificer systemerne korrekt og byg governance-strukturer der holder under revision.':'Map your AI portfolio, classify systems correctly and build governance structures that hold up under audit.',
       btn:L==='da'?'AI Governance':'AI Governance',page:'ai',
       accent:'#1C8C8C'
@@ -556,7 +556,7 @@ function goSlide(n){
 }
 function startSlider(){
   if(slideTimer)clearInterval(slideTimer);
-  slideTimer=setInterval(()=>goSlide((slideIdx+1)%4),5000);
+  slideTimer=setInterval(()=>goSlide((slideIdx+1)%4),10000);
 }
 window.goSlide=goSlide;
 
