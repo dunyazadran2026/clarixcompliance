@@ -407,7 +407,7 @@ function buildHome(){
     <button onclick="goSlide((slideIdx-1+4)%4)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:40px;height:40px;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(4px);z-index:10;">‹</button>
     <button onclick="goSlide((slideIdx+1)%4)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;width:40px;height:40px;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(4px);z-index:10;">›</button>
     <!-- Badges -->
-    <div style="position:absolute;bottom:0;left:-20;right:0;border-top:1px solid rgba(255,255,255,.08);padding:12px 0;background:rgba(14,42,71,.6);backdrop-filter:blur(8px);">
+    <div style="position:absolute;bottom:0;left:0;right:0;border-top:1px solid rgba(255,255,255,.08);padding:12px 0;background:rgba(14,42,71,.6);backdrop-filter:blur(8px);">
       <div class="w"><div class="badge-row">
         <span class="badge">Microsoft Copilot</span><span class="badge">ChatGPT</span>
         <span class="badge">Claude</span><span class="badge">AI Tools</span>
