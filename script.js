@@ -409,10 +409,10 @@ function buildHome(){
     <!-- Badges -->
     <div style="position:absolute;bottom:0;left:0;right:0;border-top:1px solid rgba(255,255,255,.08);padding:12px 0;background:rgba(14,42,71,.6);backdrop-filter:blur(8px);">
       <div class="w"><div class="badge-row">
-        <span class="badge">EU MDR 2017/745</span><span class="badge">IVDR 2017/746</span>
-        <span class="badge">ISO 13485</span><span class="badge">ISO 14971</span>
-        <span class="badge">EU AI Act</span><span class="badge">ISO 42001</span>
-        <span class="badge">GxP / GMP / GDP</span><span class="badge">Generic Pharma · LCM</span>
+        <span class="badge">Microsoft Copilot</span><span class="badge">ChatGPT</span>
+        <span class="badge">Claude</span><span class="badge">AI Tools</span>
+        <span class="badge">EU AI Act</span><span class="badge">MDR</span>
+        <span class="badge">GxP / GMP</span> 
       </div></div>
     </div>
   </section>
