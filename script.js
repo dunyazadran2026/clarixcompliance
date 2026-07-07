@@ -412,7 +412,7 @@ function buildHome(){
         <span class="badge">Microsoft Copilot</span><span class="badge">ChatGPT</span>
         <span class="badge">Claude</span><span class="badge">AI Tools</span>
         <span class="badge">EU AI Act</span><span class="badge">MDR</span>
-        <span class="badge">GxP / GMP</span> 
+        <span class="badge">GxP / GMP</span> <span class="badge">Generic Pharma · LCM</span>
       </div></div>
     </div>
   </section>
