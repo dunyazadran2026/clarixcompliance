@@ -53,7 +53,7 @@ const Brand = {
                   <line x1="${c-r*.18}" y1="${c-r*.35}" x2="${c+r*.52}" y2="${c-r*.35}" stroke="${t}" stroke-width="${sw2}" stroke-linecap="round"/>
                   <line x1="${c-r*.18}" y1="${c}" x2="${c+r*.52}" y2="${c}" stroke="${t}" stroke-width="${sw2}" stroke-linecap="round"/>
                   <line x1="${c-r*.18}" y1="${c+r*.35}" x2="${c+r*.32}" y2="${c+r*.35}" stroke="${t}" stroke-width="${sw2}" stroke-linecap="round"/>`,
-      strategy:`<circle cx="${c}" cy="${c}" r="${r}" stroke="${n}" stroke-width="${sw1}" fill="${t}" opacity=".18"/>
+      strategy:`<circle cx="${c}" cy="${c}" r="${r}" stroke="${n}" stroke-width="${sw1}" fill="none" opacity=".18"/>
                 <path d="M${c} ${c-r}A${r} ${r} 0 0 1 ${c+r*.866} ${c+r*.5}" stroke="${n}" stroke-width="${sw1}" stroke-linecap="round" fill="none"/>
                 <circle cx="${c}" cy="${c}" r="${sz*.072}" fill="${t}"/>
                 <line x1="${c}" y1="${c}" x2="${c-r*.5}" y2="${c-r*.68}" stroke="${t}" stroke-width="${sw2}" stroke-linecap="round"/>`
@@ -295,7 +295,8 @@ function buildHome(){
       h:L==='da'?'AI Strategi – Fra ambition til handling':'AI Strategy – From Vision to Execution',
       p:L==='da'?'Udvikl en klar AI-strategi, der understøtter jeres forretningsmål og skaber målbar værdi.':'Develop a clear AI strategy that aligns with your business objectives and delivers measurable value.',
       btn:L==='da'?'Medicinsk udstyr':'Medical Devices',page:'devices',
-      accent:'#163A5F'
+      accent:'#1C8C8C'
+        // '#163A5F'
     },
     {
       img:'pharmaceutical quality compliance',
