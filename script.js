@@ -804,7 +804,7 @@ function buildAI(){
             <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px;">+ moms</div>
           </div>
         </div>
-        <p style="font-size:11px;font-weight:300;color:#8B9BB4;margin-top:12px;text-align:center;">${L==='da'?'Partnerpris gælder for Erhvervshus Fyn og Forskerparken-medlemmer. Inkluderer workshop, frokost, fuld forplejning og alle materialer.':'Partner price applies to Erhvervshus Fyn and Forskerparken members. Includes workshop, lunch, full catering and all materials.'}</p>
+        <p style="font-size:16px;font-weight:400;color:#8B9BB4;margin-top:12px;text-align:center;">${L==='da'?'Partnerpris gælder for Erhvervshus Fyn, Forskerparkens-medlemmer og Life Science Fyns medlemmer. Inkluderer workshop, frokost, fuld forplejning og alle materialer.':'Partner price applies to Erhvervshus Fyn, Forskerparken members and Life Science Fyn members. Includes workshop, lunch, full catering and all materials.'}</p>
       </div>
     </section>
 
