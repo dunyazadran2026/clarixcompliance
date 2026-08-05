@@ -126,7 +126,7 @@ function switchLang(l){lang=l;window.currentLang=l;localStorage.setItem('cx_lang
 // ── 2) TAB-AWAY TITLE FLASHER ─────────────────
 (function(){
   const orig=document.title;
-  const msgs=['Kom tilbage! 👋','Jeg kan hjælpe dig 🎯','Clarix Compliance 💡','Book et møde 📅'];
+  const msgs=['Kom tilbage! 👋','Tilmeld dig workshopen 🎯','Clarix Compliance 💡','Book et møde 📅'];
   let ti=null,idx=0;
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden){
