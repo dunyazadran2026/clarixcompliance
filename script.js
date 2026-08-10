@@ -701,7 +701,7 @@ function buildAI(){
               <span class="ins-tag">${L==='da'?'Frokost inkl.':'Lunch incl.'}</span>
             </div>
             <div style="background:#f5f7fa;border-radius:6px;padding:16px 20px;margin-bottom:20px;">
-              ${locBadge(L==='da'?'København':'Copenhagen','10. juni 2026','Health Tech Hub Copenhagen')}
+              ${locBadge(L==='da'?'København':'Copenhagen','15. september 2026','Health Tech Hub Copenhagen')}
               ${locBadge(L==='da'?'Aarhus':'Aarhus','26. august 2026','Kitchen Aarhus')}
               ${locBadge(L==='da'?'Odense':'Odense','10. september 2026','Forskerparken')}
             </div>
@@ -953,18 +953,18 @@ function buildAbout(){
         ${L==='da'?`
         <p>Jeg er Dunya Zadran, uafhængig regulatory consultant baseret i Odense, Danmark. Jeg arbejder med MedTech-producenter, farmaceutiske virksomheder, startups og distributører i hele Europa.</p>
         <p>Min baggrund spænder over regulatory affairs og kvalitetsstyring inden for både medicinsk udstyr og farmaci — kombineret med specialisering i AI governance og implementering af AI i regulerede workflows.</p>
-        <p>Mere end 15 år på tværs af hele produktets livscyklus: fra tidlig regulatory strategi og teknisk dokumentation til post-market overvågning og myndighedsinspektioner.</p>
+        <p>På tværs af hele produktets livscyklus: fra tidlig regulatory strategi og teknisk dokumentation til post-market overvågning og myndighedsinspektioner.</p>
         `:`
         <p>I am Dunya Zadran, an independent regulatory consultant based in Odense, Denmark. I work with MedTech manufacturers, pharmaceutical companies, startups, and distributors across Europe.</p>
         <p>My background spans regulatory affairs and quality management across both medical devices and pharmaceuticals — combined with a specialisation in AI governance and implementation of AI in regulated workflows.</p>
-        <p>Over 15 years across the full product lifecycle: from early regulatory strategy and technical documentation through post-market surveillance and authority inspections.</p>
+        <p>Across the full product lifecycle: from early regulatory strategy and technical documentation through post-market surveillance and authority inspections.</p>
         `}
         <div class="tag-cloud">${tags.map(tg=>`<span class="tag">${tg}</span>`).join('')}</div>
         <h3>${L==='da'?'Sådan arbejder jeg':'How I work'}</h3>
         <p>${L==='da'?'Jeg integrerer mig i dit team frem for at arbejde på afstand. Det betyder at jeg forstår din specifikke produktportefølje, din QMS-modenhed og dine tidslinjer — inden jeg producerer noget. Alle leverancer er struktureret med slutlæseren i tanke.':'I embed in your team rather than working at arm\'s length. That means I understand your product portfolio, QMS maturity, and timeline pressures — before I produce anything. Every deliverable is structured with the end reader in mind.'}</p>
         <div style="margin-top:20px;">${imgBlock('consultant working laptop office professional',200,L==='da'?'Regulatory consulting':'Regulatory consulting')}</div>
         <div class="hl-block" style="margin-top:20px;">
-          <p style="font-size:12px;font-weight:500;color:#163A5F;margin-bottom:6px;">${L==='da'?'Stiftende formand — Women in AI Denmark':'Founding Chair — Women in AI Denmark'}</p>
+          <p style="font-size:12px;font-weight:500;color:#163A5F;margin-bottom:6px;">${L==='da'?'Stiftende formand — Kvinde kom igang med AI - DK':'Founding Chair — Kvinde kom igang med AI - DK'}</p>
           <p style="font-size:12px;font-weight:300;color:#8B9BB4;margin:0;">${L==='da'?'Et community der udstyrer kvinder i Danmark med praktiske AI-kompetencer.':'A community dedicated to equipping women in Denmark with practical AI skills.'}</p>
         </div>
       </div>
