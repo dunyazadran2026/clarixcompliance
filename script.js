@@ -139,6 +139,7 @@ function switchLang(l){lang=l;window.currentLang=l;localStorage.setItem('cx_lang
 
 // ── ROUTING ───────────────────────────────────
 let currentPage='home';
+let suppressHashPush=false;
 function showPage(page){
   currentPage=page;
   document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
@@ -146,7 +147,28 @@ function showPage(page){
   if(el)el.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
   renderNav();
+  if(!suppressHashPush){
+    const newHash='#'+page;
+    if(location.hash!==newHash) history.pushState(null,'',newHash);
+  }
 }
+function routeFromHash(){
+  const h=(location.hash||'').replace('#','');
+  const parts=h.split('/');
+  const page=parts[0],sub=parts[1];
+  const validPages=['home','ai','devices','pharma','about','insights','contact'];
+  suppressHashPush=true;
+  if(validPages.includes(page)){
+    showPage(page);
+    if(page==='ai'&&(sub==='comp'||sub==='lead')){
+      switchWS(sub);
+    }
+  } else {
+    showPage('home');
+  }
+  suppressHashPush=false;
+}
+window.addEventListener('popstate',routeFromHash);
 
 // ── NAV ───────────────────────────────────────
 function renderNav(){
@@ -236,7 +258,7 @@ function pageCTA(h,p,pid){
     <div id="${pid}" style="position:absolute;inset:0;opacity:.08;pointer-events:none;"></div>
     <div class="w cta-inner" style="position:relative;z-index:1;">
       <h2>${h}</h2><p>${p}</p>
-      <a href="https://outlook.office.com/book/ClarixCompliance1@clarixcompliance.com/" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
+      <a href="https://outlook.office.com/book/ClarixCompliance1@clarixcompliance.com/?ismsaljsauthenabled" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
     </div>
   </section>`;
 }
@@ -466,7 +488,7 @@ function buildHome(){
     <div id="spat-stats" style="position:absolute;inset:0;opacity:.09;pointer-events:none;"></div>
     <div class="w" style="position:relative;z-index:1;">
       <div class="sec-head center"><span class="eyebrow eyebrow-w">${t('st_ey')}</span><h2 class="sec-title sec-title-w">${t('st_ti')}</h2></div>
-      <div class="stats-grid">${stats.map(s=>`<div class="stat-item"><div class="stat-num">${s.num}</div><div class="stat-label">${s.lbl}</div></div>`).join('')}</div>
+      <div class="stats-grid">${stats.map(s=>{const sm=/[A-Za-z]/.test(s.num);return `<div class="stat-item"><div class="stat-num"${sm?' style="font-size:36px;white-space:nowrap;"':''}>${s.num}</div><div class="stat-label">${s.lbl}</div></div>`;}).join('')}</div>
     </div>
   </section>
 
@@ -533,7 +555,7 @@ function buildHome(){
     <div id="spat-cta" style="position:absolute;inset:0;opacity:.08;pointer-events:none;"></div>
     <div class="w cta-inner" style="position:relative;z-index:1;">
       <h2>${t('cta_h')}</h2><p>${t('cta_p')}</p>
-      <a href="https://outlook.office.com/book/ClarixCompliance1@clarixcompliance.com/" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
+      <a href="https://outlook.office.com/book/ClarixCompliance1@clarixcompliance.com/?ismsaljsauthenabled" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
     </div>
   </section>`;
 
@@ -866,6 +888,10 @@ function switchWS(tab){
     tC.style.borderBottomColor='transparent';tC.style.color='#8B9BB4';
   }
   window.scrollTo({top:document.getElementById('page-ai').offsetTop-80,behavior:'smooth'});
+  if(!suppressHashPush){
+    const newHash='#ai/'+tab;
+    if(location.hash!==newHash) history.pushState(null,'',newHash);
+  }
 }
 window.switchWS=switchWS;
 
@@ -1030,7 +1056,7 @@ function renderAll(){
   document.documentElement.lang=lang;
   renderNav();renderFooter();
   buildHome();buildAI();buildDevices();buildPharma();buildAbout();buildInsights();buildContact();
-  showPage(currentPage);
+  routeFromHash();
 }
 
 document.addEventListener('DOMContentLoaded',renderAll);
