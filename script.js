@@ -644,10 +644,10 @@ function buildAI(){
   ];
 
   const locBadge=(city,date,venue)=>`
-    <div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(22,58,95,.07);">
-      <div style="background:rgba(28,140,140,.12);border-radius:4px;padding:4px 8px;font-size:10px;font-weight:600;color:#1C8C8C;white-space:nowrap;">${city}</div>
-      <div><div style="font-size:12px;font-weight:500;color:#163A5F;">${date}</div><div style="font-size:11px;font-weight:300;color:#8B9BB4;">${venue}</div></div>
-    </div>`;
+<div style="display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid rgba(22,58,95,.07);">
+<div style="background:rgba(28,140,140,.12);border-radius:4px;padding:5px 10px;font-size:13px;font-weight:600;color:#1C8C8C;white-space:nowrap;">${city}</div>
+<div><div style="font-size:16px;font-weight:600;color:#163A5F;">${date}</div><div style="font-size:14px;font-weight:400;color:#8B9BB4;">${venue}</div></div>
+</div>`;
 
   document.getElementById('page-ai').innerHTML=`
 
@@ -659,29 +659,33 @@ function buildAI(){
   )}
 
   <!-- ── 1) TAB SWITCHER ── -->
-  <div style="background:#fff;border-bottom:1px solid rgba(22,58,95,.1);position:sticky;top:66px;z-index:100;box-shadow:0 2px 12px rgba(22,58,95,.06);">
-    <div class="w" style="display:flex;gap:0;">
-      <button id="tab-comp" onclick="switchWS('comp')"
-        style="flex:1;padding:18px 20px;font-family:'Outfit',sans-serif;font-weight:400;font-size:14px;letter-spacing:.02em;
-               border:none;cursor:pointer;border-bottom:3px solid #1C8C8C;color:#163A5F;background:#fff;
-               transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px;">
-        <span style="display:flex;align-items:center;gap:8px;">${Brand.icon('aiact',20)}
-        ${L==='da'?'Workshop 1 — Compliance AI Workshop':'Workshop 1 — Compliance AI Workshop'}</span>
-        <span style="background:rgba(28,140,140,.12);color:#1C8C8C;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;">RA/QA</span>
-      </button>
-      <div style="width:1px;background:rgba(22,58,95,.1);margin:10px 0;"></div>
-      <button id="tab-lead" onclick="switchWS('lead')"
-        style="flex:1;padding:18px 20px;font-family:'Outfit',sans-serif;font-weight:400;font-size:14px;letter-spacing:.02em;
-               border:none;cursor:pointer;border-bottom:3px solid transparent;color:#8B9BB4;background:#fff;
-               transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px;">
-        <span style="display:flex;align-items:center;gap:8px;">${Brand.icon('strategy',20)}
-        ${L==='da'?'Workshop 2 — Ledelses AI Workshop':'Workshop 2 — Leadership AI Workshop'}</span>
-        <span style="background:rgba(22,58,95,.08);color:#8B9BB4;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;">${L==='da'?'Ledere':'Leaders'}</span>
-      </button>
-    </div>
-  </div>
+<div style="background:#fff;border-bottom:1px solid rgba(22,58,95,.1);position:sticky;top:66px;z-index:100;box-shadow:0 2px 12px rgba(22,58,95,.06);padding-top:14px;">
+<div class="w" style="text-align:center;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#8B9BB4;margin-bottom:10px;">${L==='da'?'Vælg én af de 2 workshops:':'Choose one of the 2 workshops:'}</div>
+<div class="w" style="display:flex;gap:12px;padding-bottom:14px;flex-wrap:wrap;">
+<button id="tab-comp" onclick="switchWS('comp')"
+style="flex:1;min-width:260px;padding:18px 20px;font-family:'Outfit',sans-serif;font-weight:500;font-size:15px;letter-spacing:.02em;
+border:2px solid #1C8C8C;border-radius:10px;cursor:pointer;color:#fff;background:#1C8C8C;
+transition:all .2s;display:flex;align-items:center;gap:14px;text-align:left;">
+<span style="background:rgba(255,255,255,.9);color:#163A5F;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0;">1</span>
+<span style="display:flex;flex-direction:column;gap:3px;">
+<span style="display:flex;align-items:center;gap:8px;">${Brand.icon('aiact',20)} ${L==='da'?'Compliance AI Workshop':'Compliance AI Workshop'}</span>
+<span style="font-size:11px;font-weight:400;opacity:.9;">${L==='da'?'For RA/QA-fagfolk':'For RA/QA professionals'}</span>
+</span>
+</button>
+<button id="tab-lead" onclick="switchWS('lead')"
+style="flex:1;min-width:260px;padding:18px 20px;font-family:'Outfit',sans-serif;font-weight:500;font-size:15px;letter-spacing:.02em;
+border:2px solid rgba(22,58,95,.15);border-radius:10px;cursor:pointer;color:#8B9BB4;background:#f5f7fa;
+transition:all .2s;display:flex;align-items:center;gap:14px;text-align:left;">
+<span style="background:rgba(22,58,95,.08);color:#8B9BB4;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0;">2</span>
+<span style="display:flex;flex-direction:column;gap:3px;">
+<span style="display:flex;align-items:center;gap:8px;">${Brand.icon('strategy',20)} ${L==='da'?'Ledelses AI Workshop':'Leadership AI Workshop'}</span>
+<span style="font-size:11px;font-weight:400;">${L==='da'?'For ledere & selvstændige':'For leaders & independents'}</span>
+</span>
+</button>
+</div>
+</div>
 
-  <!-- ── COMPLIANCE WORKSHOP PANEL ── -->
+<!-- ── COMPLIANCE WORKSHOP PANEL ── -->
   <div id="ws-comp">
 
     <!-- Hero image -->
@@ -737,7 +741,16 @@ function buildAI(){
             <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px;">+ moms</div>
           </div>
         </div>
-        <p style="font-size:11px;font-weight:300;color:#8B9BB4;margin-top:12px;text-align:center;">${L==='da'?'Partnerpris gælder for Health Tech Hub CPH, Kitchen Aarhus og Lifesciences Fyn-medlemmer.':'Partner price applies to Health Tech Hub CPH, Kitchen Aarhus and Lifesciences Fyn members.'}</p>
+        <div style="margin-top:20px;">
+<p style="font-size:14px;font-weight:600;color:#163A5F;text-align:center;margin-bottom:14px;">${L==='da'?'Partnerpris gælder for medlemmer af:':'Partner price applies to members of:'}</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;">
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/health-tech-hub-copenhagen.png" alt="Health Tech Hub Copenhagen" style="max-height:34px;max-width:140px;object-fit:contain;"/></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/kitchen-aarhus.png" alt="Kitchen Aarhus" style="max-height:30px;max-width:140px;object-fit:contain;"/></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/life-science-fyn.png" alt="Lifesciences Fyn" style="max-height:42px;max-width:140px;object-fit:contain;"/></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/danish-life-science-cluster.png" alt="Danish Life Science Cluster" style="max-height:38px;max-width:150px;object-fit:contain;"/></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/tecqan.png" alt="Tecqan" style="max-height:44px;max-width:150px;object-fit:contain;"/></div>
+</div>
+</div>
       </div>
     </section>
 
@@ -749,11 +762,11 @@ function buildAI(){
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;">
           ${compTopics.map((tp,i)=>`
             <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid rgba(22,58,95,.07);border-radius:4px;padding:14px 16px;">
-              ${checkIcon}<span style="font-size:12px;font-weight:300;color:#333;line-height:1.55;">${tp}</span>
+              ${checkIcon}<span style="font-size:14px;font-weight:300;color:#333;line-height:1.55;">${tp}</span>
             </div>`).join('')}
         </div>
         <div style="background:rgba(28,140,140,.07);border-left:3px solid #1C8C8C;border-radius:2px;padding:18px 22px;margin-bottom:24px;">
-          <p style="font-size:12px;font-weight:300;color:#333;line-height:1.7;margin:0;"><strong style="color:#163A5F;">${L==='da'?'Tilpasset jeres behov:':'Tailored to your needs:'}</strong> ${L==='da'?'Vi tilpasser præsentation og øvelser. Deltagerne arbejder på egne computere med hands-on øvelser hele dagen.':'We adapt the presentation and exercises. Participants work on their own computers with hands-on exercises throughout the day.'}</p>
+          <p style="font-size:15px;font-weight:300;color:#333;line-height:1.7;margin:0;"><strong style="color:#163A5F;">${L==='da'?'Tilpasset jeres behov:':'Tailored to your needs:'}</strong> ${L==='da'?'Vi tilpasser præsentation og øvelser. Deltagerne arbejder på egne computere med hands-on øvelser hele dagen.':'We adapt the presentation and exercises. Participants work on their own computers with hands-on exercises throughout the day.'}</p>
         </div>
         <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:24px;">
           ${imgBlock('workshop training technology laptop',220,L==='da'?'Hands-on workshop':'Hands-on workshop')}
@@ -790,7 +803,7 @@ function buildAI(){
             <div style="background:#f5f7fa;border-radius:6px;padding:16px 20px;margin-bottom:8px;">
               ${locBadge('Odense','3. september 2026','Forskerparken, Odense')}
             </div>
-            <div style="background:rgba(28,140,140,.07);border-radius:4px;padding:10px 14px;margin-bottom:20px;font-size:11px;font-weight:400;color:#163A5F;">
+            <div style="background:rgba(28,140,140,.07);border-radius:4px;padding:14px 18px;margin-bottom:20px;font-size:15px;font-weight:500;color:#163A5F;">
               ⏰ ${L==='da'?'Tilmeldingsfrist: 24. august 2026 · 50% ved afbud efter 3. august':'Registration deadline: 24 August 2026 · 50% cancellation fee after 3 August'}
             </div>
             <div style="display:flex;gap:10px;flex-wrap:wrap;">
@@ -826,7 +839,17 @@ function buildAI(){
             <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px;">+ moms</div>
           </div>
         </div>
-        <p style="font-size:16px;font-weight:400;color:#8B9BB4;margin-top:12px;text-align:center;">${L==='da'?'Partnerpris gælder for Erhvervshus Fyn, Forskerparkens-medlemmer og Life Science Fyns medlemmer. Inkluderer workshop, frokost, fuld forplejning og alle materialer.':'Partner price applies to Erhvervshus Fyn, Forskerparken members and Life Science Fyn members. Includes workshop, lunch, full catering and all materials.'}</p>
+        <div style="margin-top:20px;">
+<p style="font-size:14px;font-weight:600;color:#163A5F;text-align:center;margin-bottom:14px;">${L==='da'?'Partnerpris gælder for medlemmer af:':'Partner price applies to members of:'}</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:14px;">
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><span style="font-size:15px;font-weight:600;color:#163A5F;">Erhvervshus Fyn</span></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/syddanske-forskerparker.png" alt="Forskerparken" style="max-height:42px;max-width:140px;object-fit:contain;"/></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/life-science-fyn.png" alt="Life Science Fyn" style="max-height:42px;max-width:140px;object-fit:contain;"/></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/danish-life-science-cluster.png" alt="Danish Life Science Cluster" style="max-height:38px;max-width:150px;object-fit:contain;"/></div>
+<div style="background:#fff;border:1.5px solid rgba(22,58,95,.12);border-radius:8px;padding:12px 18px;display:flex;align-items:center;justify-content:center;min-width:150px;height:60px;"><img src="/logos/tecqan.png" alt="Tecqan" style="max-height:44px;max-width:150px;object-fit:contain;"/></div>
+</div>
+<p style="font-size:13px;font-weight:300;color:#8B9BB4;text-align:center;">${L==='da'?'Inkluderer workshop, frokost, fuld forplejning og alle materialer.':'Includes workshop, lunch, full catering and all materials.'}</p>
+</div>
       </div>
     </section>
 
@@ -839,11 +862,11 @@ function buildAI(){
           ${leadTopics.map((tp,i)=>`
             <div style="display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid rgba(22,58,95,.07);border-radius:4px;padding:14px 16px;">
               <div style="background:#163A5F;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;">${i+1}</div>
-              <span style="font-size:12px;font-weight:300;color:#333;line-height:1.55;">${tp}</span>
+              <span style="font-size:14px;font-weight:300;color:#333;line-height:1.55;">${tp}</span>
             </div>`).join('')}
         </div>
         <div style="background:rgba(28,140,140,.07);border-left:3px solid #1C8C8C;border-radius:2px;padding:18px 22px;margin-bottom:24px;">
-          <p style="font-size:12px;font-weight:300;color:#333;line-height:1.7;margin:0;"><strong style="color:#163A5F;">${L==='da'?'Praktisk fokus:':'Practical focus:'}</strong> ${L==='da'?'Deltagerne arbejder på egne computere med øvelser hele dagen — afprøv det du netop har lært i realtid.':'Participants work on their own computers with exercises throughout the day — test what you have just learned in real time.'}</p>
+          <p style="font-size:15px;font-weight:300;color:#333;line-height:1.7;margin:0;"><strong style="color:#163A5F;">${L==='da'?'Praktisk fokus:':'Practical focus:'}</strong> ${L==='da'?'Deltagerne arbejder på egne computere med øvelser hele dagen — afprøv det du netop har lært i realtid.':'Participants work on their own computers with exercises throughout the day — test what you have just learned in real time.'}</p>
         </div>
         <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:24px;">
           ${imgBlock('executive leadership strategy meeting',220,L==='da'?'Ledelses workshop':'Leadership workshop')}
@@ -873,25 +896,31 @@ function buildAI(){
 
 // Tab switcher function
 function switchWS(tab){
-  const comp=document.getElementById('ws-comp');
-  const lead=document.getElementById('ws-lead');
-  const tC=document.getElementById('tab-comp');
-  const tL=document.getElementById('tab-lead');
-  if(!comp||!lead)return;
-  if(tab==='comp'){
-    comp.style.display='';lead.style.display='none';
-    tC.style.borderBottomColor='#1C8C8C';tC.style.color='#163A5F';
-    tL.style.borderBottomColor='transparent';tL.style.color='#8B9BB4';
-  } else {
-    comp.style.display='none';lead.style.display='';
-    tL.style.borderBottomColor='#1C8C8C';tL.style.color='#163A5F';
-    tC.style.borderBottomColor='transparent';tC.style.color='#8B9BB4';
-  }
-  window.scrollTo({top:document.getElementById('page-ai').offsetTop-80,behavior:'smooth'});
-  if(!suppressHashPush){
-    const newHash='#ai/'+tab;
-    if(location.hash!==newHash) history.pushState(null,'',newHash);
-  }
+const comp=document.getElementById('ws-comp');
+const lead=document.getElementById('ws-lead');
+const tC=document.getElementById('tab-comp');
+const tL=document.getElementById('tab-lead');
+if(!comp||!lead)return;
+const bC=tC.querySelector('span');
+const bL=tL.querySelector('span');
+if(tab==='comp'){
+comp.style.display='';lead.style.display='none';
+tC.style.background='#1C8C8C';tC.style.borderColor='#1C8C8C';tC.style.color='#fff';
+tL.style.background='#f5f7fa';tL.style.borderColor='rgba(22,58,95,.15)';tL.style.color='#8B9BB4';
+if(bC){bC.style.background='rgba(255,255,255,.9)';bC.style.color='#163A5F';}
+if(bL){bL.style.background='rgba(22,58,95,.08)';bL.style.color='#8B9BB4';}
+} else {
+comp.style.display='none';lead.style.display='';
+tL.style.background='#1C8C8C';tL.style.borderColor='#1C8C8C';tL.style.color='#fff';
+tC.style.background='#f5f7fa';tC.style.borderColor='rgba(22,58,95,.15)';tC.style.color='#8B9BB4';
+if(bL){bL.style.background='rgba(255,255,255,.9)';bL.style.color='#163A5F';}
+if(bC){bC.style.background='rgba(22,58,95,.08)';bC.style.color='#8B9BB4';}
+}
+window.scrollTo({top:document.getElementById('page-ai').offsetTop-80,behavior:'smooth'});
+if(!suppressHashPush){
+const newHash='#ai/'+tab;
+if(location.hash!==newHash) history.pushState(null,'',newHash);
+}
 }
 window.switchWS=switchWS;
 
