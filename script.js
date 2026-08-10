@@ -75,7 +75,7 @@ const S={
     hero_ey:'Uafhængig Regulatory Consultant · Odense, Danmark',
     hero_h:'Regulatory compliance,',hero_hs:'der beskytter din vej til markedet.',
     hero_sub:'Seniorniveau ekspertise inden for MDR/IVDR, ISO 13485, EU AI Act og GxP — for MedTech- og Pharmavirksomheder, der ikke har råd til at tage fejl.',
-    bk_h:'Book et gratis opdagelsesmøde',bk_p:'Usikker på, hvor du skal starte? Lad os tale om din regulatoriske situation. Ingen forpligtelse.',
+    bk_h:'Book et uforpligtende opdagelsesmøde',bk_p:'Usikker på, hvor du skal starte? Lad os tale om din regulatoriske situation. Ingen forpligtelse.',
     bk1:'📅  Book via Calendly',bk2:'✉️  Send en besked',bk3:'Eller forbind på',
     q_ey:'Hvad kunder siger',q_ti:'Betroet af RA/QA-ledere inden for MedTech og Pharma',
     sv_ey:'Hvad jeg tilbyder',sv_ti:'Regulatory ekspertise gennem hele produktets livscyklus',
@@ -87,7 +87,7 @@ const S={
     ab_b1:'Mød Dunya',ab_b2:'Book et møde',
     ts_ey:'Kundefeedback',ts_ti:'Betroet på tværs af det regulatoriske spektrum',
     in_ey:'Indsigt',in_ti:'Regulatory intelligence for RA/QA-ledere',in_more:'Alle indsigter →',
-    cta_h:'Klar til at styrke din regulatoriske position?',cta_p:'Book et gratis opdagelsesmøde — ingen forpligtelse, intet salgspres.',cta_b:'📅  Book et gratis møde',
+    cta_h:'Klar til at styrke din regulatoriske position?',cta_p:'Book et uforpligtende opdagelsesmøde — ingen forpligtelse, intet salgspres.',cta_b:'📅  Book et uforpligtende møde',
     del_lbl:'Typiske leverancer',
     footer_s:'Services',footer_c:'Virksomhed',footer_l:'Forbind',footer_loc:'Odense, Danmark',
     footer_copy:'© 2025 Clarix Compliance Consulting · Alle rettigheder forbeholdes',
@@ -968,7 +968,7 @@ function buildAbout(){
     pageHero(L==='da'?'Om':'About','Dunya Zadran',L==='da'?'Uafhængig Regulatory Consultant — MDR/IVDR, ISO 13485, AI Governance, GxP':'Independent Regulatory Consultant — MDR/IVDR, ISO 13485, AI Governance, GxP','ph-ab')+
     `<section class="sec sec-grey"><div class="w"><div class="about-grid">
       <div>
-        <div class="about-photo">${Brand.pattern('abpat','#FFFFFF','#1C8C8C')}<span style="position:relative;z-index:1;">DZ</span></div>
+        <div class="about-photo"><img src="/images/dunya-zadran.jpg" alt="Dunya Zadran" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
         <div class="about-mi">📍 <span><strong>Odense, Danmark</strong></span></div>
         <div class="about-mi">🏢 <span><strong>Clarix Compliance Consulting</strong></span></div>
         <div class="about-mi">🎯 <span><strong>MedTech & Pharma</strong></span></div>
@@ -980,14 +980,20 @@ function buildAbout(){
       <div class="about-body">
         <h2>${L==='da'?'Senior regulatory ekspertise, leveret uafhængigt.':'Senior regulatory expertise, delivered independently.'}</h2>
         ${L==='da'?`
-        <p>Jeg er Dunya Zadran, uafhængig regulatory consultant baseret i Odense, Danmark. Jeg arbejder med MedTech-producenter, farmaceutiske virksomheder, startups og distributører i hele Europa.</p>
-        <p>Min baggrund spænder over regulatory affairs og kvalitetsstyring inden for både medicinsk udstyr og farmaci — kombineret med specialisering i AI governance og implementering af AI i regulerede workflows.</p>
-        <p>På tværs af hele produktets livscyklus: fra tidlig regulatory strategi og teknisk dokumentation til post-market overvågning og myndighedsinspektioner.</p>
-        `:`
-        <p>I am Dunya Zadran, an independent regulatory consultant based in Odense, Denmark. I work with MedTech manufacturers, pharmaceutical companies, startups, and distributors across Europe.</p>
-        <p>My background spans regulatory affairs and quality management across both medical devices and pharmaceuticals — combined with a specialisation in AI governance and implementation of AI in regulated workflows.</p>
-        <p>Across the full product lifecycle: from early regulatory strategy and technical documentation through post-market surveillance and authority inspections.</p>
-        `}
+        <p>Jeg hjælper regulerede virksomheder med at implementere AI sikkert og compliant.</p>
+<p>Længe før AI blev et fast punkt på ledelsens agenda, holdt jeg oplæg, masterclasses, implementerede AI i Regulatory Affairs- og Quality-processer samt udviklede governance-rammer for ansvarlig anvendelse af AI.</p>
+<p>Min baggrund kombinerer ingeniørfaglighed, kvalitetssikring og regulatoriske kompetencer. Jeg er uddannet civilingeniør inden for sundhedsteknologi og har arbejdet som QA Manager, Regulatory Affairs Specialist og AI Governance-rådgiver inden for MedTech og Pharma. Det giver mig en dyb forståelse for samspillet mellem regulatoriske krav, kvalitetssystemer og forretningsprocesser i regulerede brancher.</p>
+<p>Jeg tror på, at succesfuld AI-anvendelse starter med vision og strategi, ikke med værktøjer. Virksomheder har brug for en klar retning fra ledelsen, en stærk governance-struktur, velfungerende organisationer og veldefinerede arbejdsprocesser, før AI skaber reel værdi.</p>
+<p>Gennem Clarix Compliance hjælper jeg virksomheder med at udvikle deres AI-vision, forankre strategien i ledelsen, styrke organisationen, optimere opgaver og implementere de rette AI-værktøjer på en compliant måde.</p>
+<p>Min mission er enkel: Alle vidensmedarbejdere skal have adgang til deres egen personlige AI-assistent, og virksomheder skal kunne udnytte AI ansvarligt, effektivt og med tillid.</p>
+`:`
+<p>I help regulated companies implement AI safely and compliantly.</p>
+<p>Long before AI became a boardroom topic, I was delivering keynote talks, masterclasses, implementing AI in Regulatory Affairs and Quality workflows, and helping organizations establish governance frameworks for responsible AI adoption.</p>
+<p>My background combines engineering, quality assurance and regulatory affairs. I hold a Master's degree in Health Technology Engineering and have worked across MedTech and Pharma as a QA Manager, Regulatory Affairs Specialist and AI Governance Consultant. This gives me a unique understanding of how regulatory requirements, quality systems and business processes interact across regulated industries.</p>
+<p>I believe successful AI adoption starts with vision and strategy, not tools. Organizations need clear direction from leadership, a strong governance framework, well-defined processes and the right capabilities before implementing AI at scale.</p>
+<p>Through Clarix Compliance, I help organizations develop their AI vision, align leadership and employees, redesign workflows, and implement practical AI solutions that create measurable value while maintaining compliance.</p>
+<p>My mission is simple: to ensure that every knowledge worker has access to a personal AI assistant and that organizations can leverage AI responsibly, efficiently and with confidence.</p>
+`}
         <div class="tag-cloud">${tags.map(tg=>`<span class="tag">${tg}</span>`).join('')}</div>
         <h3>${L==='da'?'Sådan arbejder jeg':'How I work'}</h3>
         <p>${L==='da'?'Jeg integrerer mig i dit team frem for at arbejde på afstand. Det betyder at jeg forstår din specifikke produktportefølje, din QMS-modenhed og dine tidslinjer — inden jeg producerer noget. Alle leverancer er struktureret med slutlæseren i tanke.':'I embed in your team rather than working at arm\'s length. That means I understand your product portfolio, QMS maturity, and timeline pressures — before I produce anything. Every deliverable is structured with the end reader in mind.'}</p>
@@ -996,6 +1002,10 @@ function buildAbout(){
           <p style="font-size:12px;font-weight:500;color:#163A5F;margin-bottom:6px;">${L==='da'?'Stiftende formand — Kvinde kom igang med AI - DK':'Founding Chair — Kvinde kom igang med AI - DK'}</p>
           <p style="font-size:12px;font-weight:300;color:#8B9BB4;margin:0;">${L==='da'?'Et community der udstyrer kvinder i Danmark med praktiske AI-kompetencer.':'A community dedicated to equipping women in Denmark with practical AI skills.'}</p>
         </div>
+<div class="hl-block" style="margin-top:12px;">
+<p style="font-size:12px;font-weight:500;color:#163A5F;margin-bottom:6px;">${L==='da'?'Stiftende formand — AI in Regulatory and QA work':'Founding Chair — AI in Regulatory and QA work'}</p>
+<p style="font-size:12px;font-weight:300;color:#8B9BB4;margin:0;">${L==='da'?'Et professionelt LinkedIn-community for at dele praktisk viden, værktøjer og best practices om ansvarlig og compliant brug af AI i Regulatory Affairs og Quality Assurance.':'A professional LinkedIn community for sharing practical knowledge, tools, and best practices on using AI responsibly and compliantly in Regulatory Affairs and Quality Assurance.'}</p>
+</div>
       </div>
     </div></div></section>`+
     pageCTA(L==='da'?'Lad os tale om dine regulatoriske udfordringer.':'Let\'s talk about your regulatory challenges.',L==='da'?'Intet salgspres — bare en direkte samtale om, hvor du er, og hvad du har brug for.':'No sales pressure — just a direct conversation about where you are and what you need.','ph-ab-cta');
