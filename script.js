@@ -3,7 +3,7 @@
    6 updates:
    1) Workshop tab switcher on AI page
    2) Tab-away title flasher
-   3) Email → dunya.zadran@outlook.dk
+   3) Email → dunyazadran@clarixcompliance.com
    4) Unsplash placeholder images + video placeholder
    5) Home hero slider (4 slides)
    6) Modern tech-vibe styling hooks
@@ -66,7 +66,7 @@ window.Brand=Brand;
 // ── LANGUAGE ──────────────────────────────────
 let lang=localStorage.getItem('cx_lang')||'da';
 window.currentLang=lang;
-const MAIL='dunya.zadran@outlook.dk';
+const MAIL='dunyazadran@clarixcompliance.com';
 
 const S={
   da:{
@@ -236,7 +236,7 @@ function pageCTA(h,p,pid){
     <div id="${pid}" style="position:absolute;inset:0;opacity:.08;pointer-events:none;"></div>
     <div class="w cta-inner" style="position:relative;z-index:1;">
       <h2>${h}</h2><p>${p}</p>
-      <a href="https://calendly.com/dunyazadran" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
+      <a href="https://outlook.office.com/book/ClarixCompliance1@clarixcompliance.com/" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
     </div>
   </section>`;
 }
@@ -533,7 +533,7 @@ function buildHome(){
     <div id="spat-cta" style="position:absolute;inset:0;opacity:.08;pointer-events:none;"></div>
     <div class="w cta-inner" style="position:relative;z-index:1;">
       <h2>${t('cta_h')}</h2><p>${t('cta_p')}</p>
-      <a href="https://calendly.com/dunyazadran" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
+      <a href="https://outlook.office.com/book/ClarixCompliance1@clarixcompliance.com/" target="_blank" rel="noopener" class="btn btn-teal">${t('cta_b')}</a>
     </div>
   </section>`;
 
