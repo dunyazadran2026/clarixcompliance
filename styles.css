@@ -246,3 +246,21 @@ a{text-decoration:none;color:inherit;}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
 a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:2px;}
+
+
+/* ================================================
+   MOBILE-FRIENDLINESS FIXES (added for phone support)
+================================================ */
+html,body{overflow-x:hidden;}
+img{max-width:100%;height:auto;}
+h1,h2,h3,h4,p,a,span,div{overflow-wrap:break-word;word-break:break-word;}
+
+/* Allow grid items to shrink instead of forcing horizontal overflow */
+.stats-grid>*,.svc-grid>*,.testi-grid>*,.ins-grid>*,.ins-full-grid>*,.footer-grid>*,.about-grid>*,.contact-grid>*,.svc-det-grid>*,.form-row>*,.hero-inner>*{min-width:0;}
+
+@media(max-width:640px){
+    .btn{white-space:normal;text-align:center;line-height:1.3;}
+    .cta-inner .btn,.book-card .btn,.hero-actions .btn{width:100%;justify-content:center;}
+    .stat-num{font-size:44px;}
+    .hero h1{font-size:clamp(38px,10vw,56px);}
+}
