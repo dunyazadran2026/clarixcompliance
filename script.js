@@ -74,7 +74,7 @@ const S={
     book_nav:'Book et møde',
     hero_ey:'Uafhængig Regulatory Consultant · Odense, Danmark',
     hero_h:'Regulatory compliance,',hero_hs:'der beskytter din vej til markedet.',
-    hero_sub:'Seniorniveau ekspertise inden for MDR/IVDR, ISO 13485, EU AI Act og GxP — for MedTech- og Pharmavirksomheder, der ikke har råd til at tage fejl.',
+    hero_sub:'Seniorniveau ekspertise inden for GMP, MDR, ISO 13485, EU AI Act og GxP — for MedTech- og Pharmavirksomheder, der ikke har råd til at tage fejl.',
     bk_h:'Book et uforpligtende opdagelsesmøde',bk_p:'Usikker på, hvor du skal starte? Lad os tale om din regulatoriske situation. Ingen forpligtelse.',
     bk1:'📅  Book via Calendly',bk2:'✉️  Send en besked',bk3:'Eller forbind på',
     q_ey:'Hvad kunder siger',q_ti:'Betroet af RA/QA-ledere inden for MedTech og Pharma',
@@ -82,7 +82,7 @@ const S={
     sv_sub:'Seniorniveau regulatory viden til dit projekt — uden overhead fra en fast stilling.',
     st_ey:'Compliance-landskabet',st_ti:'Hvorfor regulatory ekspertise betyder mere end nogensinde',
     ab_ey:'Om Dunya Zadran',ab_ti:'Seniorekspertise. Ingen oplæringstid.',
-    ab_s1:'Uafhængig regulatory consultant baseret i Odense, Danmark. Min baggrund spænder over MDR/IVDR, ISO 13485, pharma GxP og AI governance.',
+    ab_s1:'Uafhængig regulatory consultant baseret i Odense, Danmark. Min baggrund spænder over MDR, ISO 13485, pharma GxP og AI governance.',
     ab_s2:'Jeg integrerer mig i dit team, tilpasset din tidslinje og leverer arbejde, der holder under revision.',
     ab_b1:'Mød Dunya',ab_b2:'Book et møde',
     ts_ey:'Kundefeedback',ts_ti:'Betroet på tværs af det regulatoriske spektrum',
@@ -99,7 +99,7 @@ const S={
     book_nav:'Book a Call',
     hero_ey:'Independent Regulatory Consultant · Odense, Denmark',
     hero_h:'Regulatory compliance',hero_hs:'that protects your path to market.',
-    hero_sub:'Senior-level expertise in MDR/IVDR, ISO 13485, EU AI Act and GxP — for MedTech and Pharma companies who cannot afford to get it wrong.',
+    hero_sub:'Senior-level expertise in GMP, MDR, ISO 13485, EU AI Act and GxP — for MedTech and Pharma companies who cannot afford to get it wrong.',
     bk_h:'Book a free discovery call',bk_p:"Not sure where to start? Let's talk through your regulatory situation. No obligation.",
     bk1:'📅  Book via Calendly',bk2:'✉️  Send a message',bk3:'Or connect on',
     q_ey:'What clients say',q_ti:'Trusted by RA/QA leaders across MedTech and Pharma',
@@ -107,7 +107,7 @@ const S={
     sv_sub:'Senior-level regulatory knowledge to your project — without the overhead of a permanent hire.',
     st_ey:'The compliance landscape',st_ti:'Why regulatory expertise matters now more than ever',
     ab_ey:'About Dunya Zadran',ab_ti:'Senior expertise. No learning curve.',
-    ab_s1:'Independent regulatory consultant based in Odense, Denmark. Background spans MDR/IVDR, ISO 13485, pharma GxP, and AI governance.',
+    ab_s1:'Independent regulatory consultant based in Odense, Denmark. Background spans MDR, ISO 13485, pharma GxP, and AI governance.',
     ab_s2:'I embed in your team, align to your timeline, and deliver work that holds up under audit.',
     ab_b1:'Meet Dunya',ab_b2:'Book a Call',
     ts_ey:'Client feedback',ts_ti:'Trusted across the regulatory spectrum',
@@ -354,7 +354,7 @@ function buildHome(){
 
   const svcs=[
     {icon:'ai',k:'ai',n:L==='da'?'AI Workshops':'AI Workshops',d:L==='da'?'Lær at bruge AI sikkert og effektivt gennem praktiske øvelser og konkrete arbejdsopgaver og direkte anvendelige fra dag ét.':'Learn how to use AI safely and effectively through practical exercises, real-world business scenarios and directly applicable from day one.',l:L==='da'?'Se workshops →':'View workshops →'},
-    {icon:'mdr',k:'devices',n:L==='da'?'Medicinsk udstyr':'Medical Devices',d:L==='da'?'Udvikl en klar AI-strategi, der understøtter jeres forretningsmål og skaber målbar værdi.':'Develop a clear AI strategy that aligns with your business objectives and delivers measurable value.',l:'MDR · IVDR · ISO 14971 →'},
+    {icon:'mdr',k:'devices',n:L==='da'?'Medicinsk udstyr':'Medical Devices',d:L==='da'?'Udvikl en klar AI-strategi, der understøtter jeres forretningsmål og skaber målbar værdi.':'Develop a clear AI strategy that aligns with your business objectives and delivers measurable value.',l:'MDR · GMP· ISO 14971 →'},
     {icon:'regulatory',k:'pharma',n:'Pharma & GxP',d:L==='da'?'Etabler en enkel og robust governance-model, der sikrer ansvarlig, compliant og kontrolleret brug af AI.':'Establish a practical governance framework that enables responsible, compliant and controlled AI adoption.',l:'GxP · LCM · Submissions →'},
     {icon:'quality',k:'devices',n:L==='da'?'Kvalitetsstyring':'Quality Management',d:L==='da'?'ISO 13485-implementering, CAPA-styring, interne audit-programmer og leverandørkvalificering.':'ISO 13485 implementation, CAPA management, internal audit programmes and supplier qualification.',l:'ISO 13485 · CAPA →'},
     {icon:'aiact',k:'ai',n:'AI Governance',d:L==='da'?'Omsæt AI til konkrete arbejdsgange, der effektiviserer processer og styrker kvaliteten i hverdagen.':'Turn AI into practical workflows that improve efficiency, consistency and everyday productivity.',l:'EU AI Act · ISO 42001 →'},
@@ -701,7 +701,7 @@ transition:all .2s;display:flex;align-items:center;gap:14px;text-align:left;">
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
               <span class="ins-tag">09:00–15:00</span>
               <span class="ins-tag">RA / QA</span>
-              <span class="ins-tag">MDR · IVDR · AI Act</span>
+              <span class="ins-tag">MDR · GXP · AI Act</span>
               <span class="ins-tag">${L==='da'?'Frokost inkl.':'Lunch incl.'}</span>
             </div>
             <div style="background:#f5f7fa;border-radius:6px;padding:16px 20px;margin-bottom:20px;">
@@ -773,7 +773,7 @@ transition:all .2s;display:flex;align-items:center;gap:14px;text-align:left;">
           <div style="display:flex;flex-direction:column;justify-content:center;gap:16px;">
             <div style="background:#fff;border:1px solid rgba(22,58,95,.08);border-radius:6px;padding:20px;">
               <span class="eyebrow" style="margin-bottom:8px;">${L==='da'?'Instruktør':'Instructor'}</span>
-              <p style="font-size:13px;font-weight:300;color:#8B9BB4;line-height:1.7;margin:0;">${L==='da'?'Dunya Zadran fra Clarix Compliance — erfaring fra strategisk AI-implementering i regulerede miljøer kombineret med seniorniveau MDR/IVDR og EU AI Act ekspertise.':'Dunya Zadran from Clarix Compliance — experience from strategic AI implementation in regulated environments combined with senior-level MDR/IVDR and EU AI Act expertise.'}</p>
+              <p style="font-size:13px;font-weight:300;color:#8B9BB4;line-height:1.7;margin:0;">${L==='da'?'Dunya Zadran fra Clarix Compliance — erfaring fra strategisk AI-implementering i regulerede miljøer kombineret med seniorniveau GMP, MDR og EU AI Act ekspertise.':'Dunya Zadran from Clarix Compliance — experience from strategic AI implementation in regulated environments combined with senior-level GMP, MDR and EU AI Act expertise.'}</p>
             </div>
             <a href="${MAIL_CO}" class="btn btn-teal" style="justify-content:center;">${L==='da'?'📅  Tilmeld Compliance AI Workshop':'📅  Register for Compliance AI Workshop'}</a>
           </div>
@@ -928,14 +928,14 @@ window.switchWS=switchWS;
 function buildDevices(){
   const L=lang;
   document.getElementById('page-devices').innerHTML=
-    pageHero(L==='da'?'Medicinsk udstyr':'Medical Devices',L==='da'?'MDR / IVDR & Kvalitetssystemer':'MDR / IVDR & Quality Systems',L==='da'?'Seniorniveau støtte til teknisk dokumentation, notified body-forberedelse, ISO 13485 QMS og post-market overvågning — struktureret til revision fra dag ét.':'Senior-level support for technical documentation, notified body preparation, ISO 13485 QMS, and post-market surveillance — structured for audit from day one.','ph-dev')+
+    pageHero(L==='da'?'Medicinsk udstyr':'Medical Devices',L==='da'?'MDR & Kvalitetssystemer':'MDR / & Quality Systems',L==='da'?'Seniorniveau støtte til teknisk dokumentation, notified body-forberedelse, ISO 13485 QMS og post-market overvågning — struktureret til revision fra dag ét.':'Senior-level support for technical documentation, notified body preparation, ISO 13485 QMS, and post-market surveillance — structured for audit from day one.','ph-dev')+
     `<section class="sec sec-white"><div class="w">`+
     (L==='da'?
-      delBlock('EU MDR 2017/745 & IVDR 2017/746','MDR / IVDR Compliance',['EU MDR og IVDR har fundamentalt hævet barren. Kløften mellem hvad producenter leverer og hvad notified bodies kræver — er der forsinkelserne sker.','Hands-on støtte fra gap-analyse til teknisk dokumentation og notified body-forberedelse.'],['Gap-analyse mod MDR Annex I, II, III','TD-gennemgang og remediering','CER og SSCP-forberedelse','PMS-plan og PSUR / PMCF-design','EUDAMED-registrering og UDI','Mærknings- og IFU-gennemgang','Notified body query-respons','IVDR performance evaluation (Annex XIII)'])+
+      delBlock('EU MDR 2017/745','MDR Compliance',['EU MDR og GXP har fundamentalt hævet barren. Kløften mellem hvad producenter leverer og hvad notified bodies kræver — er der forsinkelserne sker.','Hands-on støtte fra gap-analyse til teknisk dokumentation og notified body-forberedelse.'],['Gap-analyse mod MDR Annex I, II, III','TD-gennemgang og remediering','CER og SSCP-forberedelse','PMS-plan og PSUR / PMCF-design','EUDAMED-registrering og UDI','Mærknings- og IFU-gennemgang','Notified body query-respons',''])+
       delBlock('Kvalitetsstyring','ISO 13485 & QMS-implementering',['Et QMS der består en audit er ikke det samme som ét der forebygger problemer.','Jeg hjælper producenter med at bygge systemer der er både compliant og operationelt effektive.'],['ISO 13485 gap-analyse og implementeringsplan','SOP-udvikling og dokumentstyring','Intern audit-planlægning og -rapportering','CAPA-styring og root cause-analyse','Leverandørkvalificering','Ledelsesgennemgang-facilitering'])+
       delBlock('Risikostyring','ISO 14971 Risikostyring',['Afkoblede risikofiler er et af de hyppigste fund i notified body-vurderinger.'],['Risikostyringsfil-gennemgang','Risikostyringsplan (ISO 14971:2019)','Fareidentifikation og risikoestimering','Benefit-risk analyse','Risikostyringsrapport','Integration med klinisk evaluering og PMS-data'])
     :
-      delBlock('EU MDR 2017/745 & IVDR 2017/746','MDR / IVDR Compliance',['EU MDR and IVDR have fundamentally raised the bar. The gap between what manufacturers produce and what notified bodies require is where delays happen.','Hands-on support from gap analysis through technical documentation and notified body preparation.'],['Gap analysis against MDR Annex I, II, III','TD review and remediation','CER and SSCP preparation','PMS plan and PSUR / PMCF design','EUDAMED registration and UDI','Labelling and IFU review','Notified body query response','IVDR performance evaluation (Annex XIII)'])+
+      delBlock('EU MDR 2017/7456','MDR',['EU MDR and GXP have fundamentally raised the bar. The gap between what manufacturers produce and what notified bodies require is where delays happen.','Hands-on support from gap analysis through technical documentation and notified body preparation.'],['Gap analysis against MDR Annex I, II, III','TD review and remediation','CER and SSCP preparation','PMS plan and PSUR / PMCF design','EUDAMED registration and UDI','Labelling and IFU review','Notified body query response',''])+
       delBlock('Quality Management','ISO 13485 & QMS Implementation',['A QMS that passes an audit is not the same as one that prevents problems.','I help manufacturers build systems that are both compliant and operationally effective.'],['ISO 13485 gap analysis and implementation roadmap','SOP development and document control','Internal audit planning and reporting','CAPA management and root cause analysis','Supplier qualification','Management review facilitation'])+
       delBlock('Risk Management','ISO 14971 Risk Management',['Disconnected risk files are one of the most common findings in notified body assessments.'],['Risk management file review','Risk management plan (ISO 14971:2019)','Hazard identification and risk estimation','Benefit-risk analysis','Risk management report','Integration with clinical evaluation and PMS data'])
     )+`</div></section>`+
@@ -963,9 +963,9 @@ function buildPharma(){
 
 function buildAbout(){
   const L=lang;
-  const tags=['EU MDR 2017/745','EU IVDR 2017/746','ISO 13485','ISO 14971','ISO 42001','ISO 27001','EU AI Act','GxP','Generic Pharma','LCM','CAPA','Internal Audits','EUDAMED','PMS / PSUR'];
+  const tags=['EU MDR 2017/745','GMP','ISO 13485','ISO 14971','ISO 42001','ISO 27001','EU AI Act','GxP','Generic Pharma','LCM','CAPA','Internal Audits','EUDAMED','PMS / PSUR'];
   document.getElementById('page-about').innerHTML=
-    pageHero(L==='da'?'Om':'About','Dunya Zadran',L==='da'?'Uafhængig Regulatory Consultant — MDR/IVDR, ISO 13485, AI Governance, GxP':'Independent Regulatory Consultant — MDR/IVDR, ISO 13485, AI Governance, GxP','ph-ab')+
+    pageHero(L==='da'?'Om':'About','Dunya Zadran',L==='da'?'Uafhængig Regulatory Consultant — GMP, MDR, ISO 13485, AI Governance, GxP':'Independent Regulatory Consultant — GMP, MDR, ISO 13485, AI Governance, GxP','ph-ab')+
     `<section class="sec sec-grey"><div class="w"><div class="about-grid">
       <div>
         <div class="about-photo"><img src="/images/dunya-zadran.jpg" alt="Dunya Zadran" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
@@ -1051,8 +1051,8 @@ function buildInsights(){
 function buildContact(){
   const L=lang;
   const topics=L==='da'
-    ?['MDR / IVDR compliance','Kvalitetsstyring (ISO 13485)','AI Governance / EU AI Act','Pharma Regulatory Affairs / GxP','AI Workshops','Risikostyring (ISO 14971)','Andet / ikke sikker endnu']
-    :['MDR / IVDR compliance','Quality Management (ISO 13485)','AI Governance / EU AI Act','Pharma Regulatory Affairs / GxP','AI Workshops','Risk Management (ISO 14971)','Other / not sure yet'];
+    ?['MDR compliance','Kvalitetsstyring (ISO 13485)','AI Governance / EU AI Act','Pharma Regulatory Affairs / GxP','AI Workshops','Risikostyring (ISO 14971)','Andet / ikke sikker endnu']
+    :['MDR compliance','Quality Management (ISO 13485)','AI Governance / EU AI Act','Pharma Regulatory Affairs / GxP','AI Workshops','Risk Management (ISO 14971)','Other / not sure yet'];
   document.getElementById('page-contact').innerHTML=
     pageHero(L==='da'?'Kontakt':'Contact',L==='da'?'Lad os tale':'Let\'s talk',L==='da'?'Har du et specifikt projekt, eller vil du bare forstå din regulatoriske position? Start her.':'Whether you have a specific project or just want to understand your regulatory position — start here.','ph-co')+
     `<section class="sec sec-grey"><div class="w"><div class="contact-grid">
